@@ -21,6 +21,7 @@ description: "Rules for commits, pushes, and PRs on a team repo (new branch: git
 - Do not report commit hashes.
 
 ## PR
+- New feature work (adds functionality; not bug fixes, docs, or rule/config changes): commit and push, then ask once with a decision card whether to open the PR, and open it only on yes. This is a deliberate exception to the self-check. Other work: open the PR without asking.
 - Before the PR: check related repo docs are current and fix stale parts in the same PR.
 - Before every commit of code and before the PR: deslop.
 - Before the PR: pr-review.
