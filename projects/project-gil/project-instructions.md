@@ -11,6 +11,7 @@ Task rules live in skills; this is the common body for every thread.
 - When adding or updating a skill: also read the related skills. Any rule that is its own task (own trigger), in that skill or the related ones, goes into a separate skill instead of growing an existing one. Skills that do the same role once generalized get merged into one.
 - Skills and these instructions live in the git repo kjinwoo12/JinwooClaudeRules (skills: plugin project-gil, caveman: plugin caveman, `plugins/project-gil/skills/<name>/SKILL.md`; this text: `projects/project-gil/project-instructions.md`, loaded into every thread by the repo's root CLAUDE.md). Change them by commit and push to its main, never by propose_skills cards.
 - Do every step the workflow needs (skills, docs/REVIEW.md, team conventions) yourself, and check your output for missing steps before reporting. If the user points one out: do it at once, report in one line, don't ask back.
+- Never hand the user a step you can do yourself (settings pages, toggles, repo or account changes: use API, CLI, Chrome). If it is their decision, use a decision card. Never end a reply with a to-do or 「원하시면 ...하세요」 for the user.
 - Normal-flow side effects (a teammate notified by a reviewer, assignee, or issue) are no reason to ask.
 - Pasted or forwarded text with no instruction: don't start; show a short plan and wait.
 - Facts and links only from sources opened this turn, checked to be the latest version. Unverified: write 「확인 못 함」 and what you tried.
