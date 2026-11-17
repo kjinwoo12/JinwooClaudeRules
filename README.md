@@ -1,4 +1,4 @@
-# JinwooClaudeRule
+# JinwooClaudeRules
 
 Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 이 저장소 자체가 Claude 플러그인 마켓플레이스입니다.
 
