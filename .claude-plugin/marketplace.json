@@ -1,0 +1,14 @@
+{
+  "name": "jinwoo-claude-rule",
+  "description": "김진우의 Claude 지침과 스킬",
+  "owner": {
+    "name": "kjinwoo12"
+  },
+  "plugins": [
+    {
+      "name": "project-gil",
+      "source": "./plugins/project-gil",
+      "description": "Project Gil team workflow skills (GitHub, Unity, docs, issues, PC cleanup)"
+    }
+  ]
+}
