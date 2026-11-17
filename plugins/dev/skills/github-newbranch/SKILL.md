@@ -1,0 +1,15 @@
+---
+name: "github-newbranch"
+description: "Steps for creating any new branch on a team repo (branch cleanup first, issue, name, base)"
+---
+
+# New branch
+
+Also follow github-pr. Run every step, in order, each time a new branch is made.
+
+1. Cleanup: run branch-cleanup, every step. Never skip it, even with few branches.
+2. Issue: the branch needs an issue. None yet: create it first (github-issue-check).
+3. Name: the project's branch naming rule (project info). Never auto `claude/` names on a team repo.
+4. Base: branch from the updated default branch of the main repo, in the PC repo branch-cleanup uses (Remote Control).
+   - Work needs code that is only in an unmerged PR: before branching, tell the user and let them choose: add the commits to that PR (recommended) or stack a new branch on it. Never stack first and report after.
+5. Report: one line, the branch name and its base.

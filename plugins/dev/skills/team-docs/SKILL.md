@@ -1,9 +1,9 @@
 ---
-name: "gil-team-docs"
-description: "Project Gil: rules for writing repo docs or text that goes to teammates (issue and PR bodies, comments, comment drafts, guides, notices)"
+name: "team-docs"
+description: "Rules for writing repo docs or text that goes to teammates (issue and PR bodies, comments, comment drafts, guides, notices)"
 ---
 
-# Team doc rules (Project Gil)
+# Team doc rules
 
 ## Where
 - Team docs go in the repo, written locally. Artifacts only for showing the user.

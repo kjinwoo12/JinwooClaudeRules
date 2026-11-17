@@ -1,9 +1,9 @@
 ---
-name: "gil-unity-work"
-description: "Project Gil: rules for Unity code, scenes, prefabs, SO, tests, and design work (Remote Control, Unity MCP, test timing, no hardcoding)"
+name: "unity-work"
+description: "Rules for Unity code, scenes, prefabs, SO, tests, and design work (Remote Control, Unity MCP, test timing, no hardcoding)"
 ---
 
-# Unity work rules (Project Gil)
+# Unity work rules
 
 ## Where and how
 - Write client code on the PC local repo through Remote Control (RC) from the start.
@@ -22,15 +22,15 @@ description: "Project Gil: rules for Unity code, scenes, prefabs, SO, tests, and
 ## Code
 - No hardcoding: tunable values in SerializeField or SO, other fixed values as named constants. No magic numbers.
 - No runtime bootstrap.
-- The EditMode CodeRules tests enforce both rules above; fix the code, never loosen the test.
+- Code-rule tests that enforce these (project info): fix the code, never loosen the test.
 - No comments; repo lint blocks all but its allowed exceptions. When code seems to need an explanation, rename, extract, or add a test instead. Never use the `외부(...)` form for our own code's behavior.
 
 ## Planning and design
 - Design: settle scope, numbers, and boundaries from the issue, the spec, the code, and common sense first; ask only what none of them answer. Do not start with a document.
 - Do not decide game rules or design numbers. Do not propose game rules or safety guards inside a framework.
-- Missing design number or detail: do not ask. Put a temporary value in an SO, list each one under 「기획 확인 필요」 in the PR body, and keep going.
+- Missing design number or detail: do not ask. Put a temporary value in an SO, list each one under the PR body's open-design-values section (project info), and keep going.
 
 ## Finishing
-- When coding is done, commit with your own message (gil-github-pr) and report what was made and what was changed.
+- When coding is done, commit with your own message (github-pr) and report what was made and what was changed.
 - PR that changes a scene or prefab: write the changed scene/prefab paths and the play check result (what you pressed, what you saw) in the body.
-- Play check: follow docs/PLAY_CHECK.md (open the scene, Play, do what its feature map says, take a `manage_scene` `screenshot` with `include_image` and look at it). Update the feature map when a test scene's controls change.
+- Play check: follow the project's play check doc (project info) (open the scene, Play, do what its feature map says, take a `manage_scene` `screenshot` with `include_image` and look at it). Update the feature map when a test scene's controls change.

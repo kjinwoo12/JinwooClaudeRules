@@ -1,1 +1,2 @@
-@projects/project-gil/project-instructions.md
+@instructions/general.md
+@projects/project-gil/info.md
