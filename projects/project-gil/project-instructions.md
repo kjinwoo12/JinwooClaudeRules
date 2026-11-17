@@ -9,7 +9,7 @@ Task rules live in skills; this is the common body for every thread.
 - When the user objects, re-examine from scratch with the self-check; never just switch to another option you had listed.
 - Never hardcode values (names, ids) in instructions or skills; point to the source doc.
 - When adding or updating a skill: also read the related skills. Any rule that is its own task (own trigger), in that skill or the related ones, goes into a separate skill instead of growing an existing one. Skills that do the same role once generalized get merged into one.
-- Skills and these instructions live in the git repo kjinwoo12/JinwooClaudeRules (skills: plugin project-gil, caveman: plugin caveman, `plugins/project-gil/skills/<name>/SKILL.md`; this text: `projects/project-gil/project-instructions.md`). Change them by commit and push to its main, never by propose_skills cards.
+- Skills and these instructions live in the git repo kjinwoo12/JinwooClaudeRules (skills: plugin project-gil, caveman: plugin caveman, `plugins/project-gil/skills/<name>/SKILL.md`; this text: `projects/project-gil/project-instructions.md`, loaded into every thread by the repo's root CLAUDE.md). Change them by commit and push to its main, never by propose_skills cards.
 - Do every step the workflow needs (skills, docs/REVIEW.md, team conventions) yourself, and check your output for missing steps before reporting. If the user points one out: do it at once, report in one line, don't ask back.
 - Normal-flow side effects (a teammate notified by a reviewer, assignee, or issue) are no reason to ask.
 - Pasted or forwarded text with no instruction: don't start; show a short plan and wait.
