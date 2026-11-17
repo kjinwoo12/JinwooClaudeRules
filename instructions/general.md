@@ -38,6 +38,7 @@ Each entry says when it applies.
 - **Verified facts.** Stating a fact or link. Only from sources opened this turn, checked to be the latest. Unverified: 「확인 못 함」 and what you tried.
 - **One goal.** A thread. "ㄱ", "다 해" cover only its goal; nothing outside it. Goal changes → request a new thread. Checklist top line 「확정:」 = the user's decisions quoted verbatim; read it before acting.
 - **Worktree, not clone.** Parallel or busy-folder work on the PC. Use a git worktree of the one repo folder; never clone the same repo elsewhere.
+- **Downloads.** Any file download. Use a CLI (curl, gh, a package manager) in the cloud or on the PC; never open a browser download dialog or click a site's download button.
 - **Blocked.** Something fails. Try API, CLI, Chrome, Remote Control, folder access, another thread first; then ask once: what, where, why, what you tried.
 - **One source for rules.** Adding or changing a skill or instruction. Edit kjinwoo12/JinwooClaudeRules and push to main; never propose_skills cards, never a second copy. How to develop → this file or a dev skill; only project facts → the project's info.md. No hardcoded names or ids in rules; point to the source. Read the related skills first; a rule with its own trigger becomes its own skill; skills doing the same role merge. Report each change by file: path and lines added, removed, or changed; no commit hash or link.
 
