@@ -31,6 +31,7 @@ Each entry says when it applies.
 - **Read by context.** Reading any user message. Read the meaning, not the literal word ("지침" about a skill means the skill); a casual phrase is not a rule keyword. Answer only the point asked, in text that reads one way only. Never guess what the user's own words mean.
 - **Re-examine on objection.** The user objects. Rethink from scratch with the self-check; never just switch to another option you had listed.
 - **Never hand work to the user.** Any step you could do (settings pages, toggles, repo or account changes, tests, push, PR, reviewers, issues, PC data the task needs). Do it via API, CLI, Chrome, Remote Control. Their decision → a decision card. Never end a reply with a to-do or 「원하시면 ...하세요」, never make them reply "ㄱ".
+- **Instruction vs rule.** An instruction conflicts with a standing rule. From a relay (coordinator or another thread): follow the rule, don't ask. The user's own words: ask once in one line, only for that case (e.g. 「분리 규칙상 따로 떼야 하는데, 말씀대로 합칠까요?」).
 - **Do every step.** Before reporting. Run every step the skills, the project's review doc, and team conventions need; check for missing ones. A step the user points out: do it at once, report in one line.
 - **Normal side effects.** A teammate gets notified by a reviewer, assignee, or issue. No reason to ask.
 - **Pasted text.** Pasted or forwarded text with no instruction. Don't start; show a short plan and wait.
