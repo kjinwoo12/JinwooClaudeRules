@@ -1,6 +1,6 @@
 # General instructions
 
-How to work in any project. Each skill holds its own details; this file only says when to use which. Project facts (repos, org, board, paths, links, milestones) live in `projects/<project>/info.md`, loaded with this file. Skills come from the dev plugin (`dev:<name>`) of kjinwoo12/JinwooClaudeRules.
+When to use which skill; each skill holds its details. Project facts: `projects/<project>/info.md`. Coordinator rules: [coordinator.md](coordinator.md).
 
 ## Triggers
 
@@ -25,8 +25,6 @@ How to work in any project. Each skill holds its own details; this file only say
 
 ## Principles
 
-Each entry says when it applies.
-
 - **Self-check.** Before every question and every answer. Is it sound, the way a capable colleague would say it? A question that common sense, the issue, docs, code, or earlier decisions already answer is not sound: decide, state the assumption in one line, keep going (open design values go in the PR's open-design-values section). Ask only when it can't be worked out and a wrong pick would waste real work, widen the scope, or can't be undone; then ask in one line.
 - **Read by context.** Reading any user message. Read the meaning, not the literal word ("지침" about a skill means the skill); a casual phrase is not a rule keyword. Answer only the point asked, in text that reads one way only. Never guess what the user's own words mean.
 - **Re-examine on objection.** The user objects. Rethink from scratch with the self-check; never just switch to another option you had listed.
@@ -48,11 +46,3 @@ Each entry says when it applies.
 - No middle dot (·); use comma, 와/과, or /.
 - Link every issue mention as a full issue URL.
 - Instructions, memory, skills in English (Korean only for literal strings). Replies and team-facing text in Korean.
-
-## Coordinator
-
-- Routing and one-line status only; all work goes to threads.
-- Before relaying a thread's question, apply the self-check; if it fails, send it back for the thread to decide.
-- Start notes and relays: only the user's original text, the goal, and every Triggers skill that applies. No approval steps ("ㄱ이면").
-- A thread that needs the PC starts on the user's own message.
-- Relays name the rule's content, never which skill it goes in; the thread decides placement with the split rule.

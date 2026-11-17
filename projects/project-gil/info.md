@@ -1,7 +1,5 @@
 # Project Gil: project info
 
-Only this project's facts. How to work: instructions/general.md and the dev plugin skills.
-
 ## GitHub
 - Team repo: ProjectGil-RPG/ProjectGilRpgClient (Unity). Default branch develop, git flow per its CONTRIBUTING.md. Issue link: `https://github.com/ProjectGil-RPG/ProjectGilRpgClient/issues/<n>`.
 - PC clone remotes: origin = fork kjinwoo12/ProjectGilRpgClient, upstream = the org repo.
@@ -17,8 +15,9 @@ Only this project's facts. How to work: instructions/general.md and the dev plug
 
 ## PC
 - Work folder: F:\git\ProjectGilOrganization (also for non-Unity work). Unity repo: F:\git\ProjectGilOrganization\ProjectGilRpgClient.
-- Not this project, never touch: F:\git\GilSample.
+- Not this project, never touch unless the user names it: F:\git\GilSample (personal portfolio). Scene names in asks (e.g. 쇼케이스) mean the team repo's scenes.
+- Shutdown: run `F:\git\ProjectGilOrganization\shutdown.bat`, never raw `shutdown`; only when the user orders it for that ask, never carried over.
 
 ## Sources
 - Meeting minutes: the latest file in the project files meeting/ folder; the user-edited Discord version wins.
-- Game spec (기획서): see the team repo's CLAUDE.md.
+- Game spec (기획서): see the team repo's CLAUDE.md. 「기획서로 남기자」 means a spec in that Drive folder, never a repo issue or PR.

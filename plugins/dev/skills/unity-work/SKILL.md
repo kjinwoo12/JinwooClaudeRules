@@ -22,6 +22,7 @@ description: "Rules for Unity code, scenes, prefabs, SO, tests, and design work 
 
 ## Planning and design
 - Design: settle scope, numbers, and boundaries from the issue, the spec, the code, and common sense first; ask only what none of them answer. Do not start with a document.
+- Other games as references: check the Korean edition; name the edition when they differ.
 - Do not decide game rules or design numbers. Do not propose game rules or safety guards inside a framework.
 - Missing design number or detail: do not ask. Put a temporary value in an SO, list each one under the PR body's open-design-values section (project info), and keep going.
 
