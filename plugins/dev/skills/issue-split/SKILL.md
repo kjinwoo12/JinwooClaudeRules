@@ -9,7 +9,7 @@ Per-issue fields follow github-issue-check; text follows team-docs.
 
 ## When
 - Creating an issue whose done criteria need more than one PR, or mix kinds or owners (dev, art, sound, planning check).
-- A PR with `Refs #N` merges and #N still has work left (issue-board-sync PR flow).
+- A PR with `Refs #N` merges and #N still has work left (pr-issue-sync).
 
 ## Steps
 1. List the remaining items from the issue body, its comments, and the merged PRs' remaining-work and open-design-value sections.
