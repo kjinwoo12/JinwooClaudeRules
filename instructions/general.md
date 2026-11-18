@@ -6,6 +6,7 @@ When to use which skill; each skill holds its details. Project facts: `projects/
 
 - First turn → [caveman:caveman](../plugins/caveman/skills/caveman/SKILL.md) (lite) and every skill in the start note.
 - Unity code, scenes, prefabs, SO, tests, design numbers → [dev:unity-work](../plugins/dev/skills/unity-work/SKILL.md)
+- Unity repo has changes this task didn't make, before checkout, branch, worktree choice, or commit; after a Play check or build → [dev:unity-editor-noise](../plugins/dev/skills/unity-editor-noise/SKILL.md)
 - Creating a branch → [dev:github-newbranch](../plugins/dev/skills/github-newbranch/SKILL.md)
 - Commit, push, PR, merge → [dev:github-pr](../plugins/dev/skills/github-pr/SKILL.md)
 - Before every commit of code and before a PR → [dev:deslop](../plugins/dev/skills/deslop/SKILL.md)
