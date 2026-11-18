@@ -8,6 +8,7 @@ description: "Rules for Unity code, scenes, prefabs, SO, tests, and design work 
 ## Where and how
 - Write client code on the PC local repo through Remote Control (RC) from the start (remote-control).
 - Use Unity MCP on the open editor. If MCP fails, or the work is in a git worktree the open editor does not show, batchmode `-batchmode -nographics -quit -logFile <path>` with `-projectPath <that folder>`. No computer use.
+- Before work in the main repo folder, read `git status` and the diff. Unity editor noise (files the editor rewrote on its own: TMP dynamic font atlases after Play, Build Profiles and ProjectSettings or URP shader prefilter values after a build, other reserialized assets with no hand edits) is not someone's work: `git stash push -u -m "<what and why>"`, never commit it, then work in the main folder and report the stash in one line. Use a worktree only when the changes are real work (code, scenes, prefabs, data edited on purpose) or another task is running there.
 - Prefer not to launch the GUI editor (recommendation, not a ban). Launch it only for a step that neither CLI nor MCP on the open editor can do, such as a Play check in a worktree.
 
 ## Checks and tests
