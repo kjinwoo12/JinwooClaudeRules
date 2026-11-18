@@ -10,11 +10,9 @@ description: "Rules for writing repo docs or text that goes to teammates (issue 
 - Doc work needs no asking (edit, commit, self-merge of doc-only PRs).
 
 ## What
-- Only what readers need and what will not go stale. Link folders instead of lists or current status.
 - No separate documents outside the thread goal.
 
 ## How
-- Write so it reads one way only. Give locations as tab, table title, row, column name, and value, in sentences.
 - No claude.ai links, no teammate emails.
 - GitHub markdown: two single `~` in one paragraph or table cell render as strikethrough (`0~4, 0~6` strikes 「4, 0」). Write every range tilde as `\~` outside code; never use strikethrough on purpose. After posting, check the rendered page has no unintended strikethrough.
 

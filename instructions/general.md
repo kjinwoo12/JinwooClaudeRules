@@ -19,7 +19,7 @@ When to use which skill; each skill holds its details. Project facts: `projects/
 - Unity scene, prefab, or test scene controls changed → [dev:play-check](../plugins/dev/skills/play-check/SKILL.md)
 - Starting or instructing a Remote Control session → [dev:remote-control](../plugins/dev/skills/remote-control/SKILL.md)
 - A desktop app on the PC other than Unity → [dev:desktop-apps](../plugins/dev/skills/desktop-apps/SKILL.md)
-- Writing or editing any document (plan, spec, value sheet, Claude Doc, repo doc) → [dev:no-meta-text](../plugins/dev/skills/no-meta-text/SKILL.md)
+- Writing or cleaning up any document (plan, spec draft, Claude Doc, minutes, report, repo doc) → [dev:doc-writing](../plugins/dev/skills/doc-writing/SKILL.md)
 - Repo docs, any text teammates read → [dev:team-docs](../plugins/dev/skills/team-docs/SKILL.md)
 - End of a task that wrote files on the PC → [dev:pc-scratch-cleanup](../plugins/dev/skills/pc-scratch-cleanup/SKILL.md)
 - Creating or editing a skill → anthropic-skills:skill-creator. Before committing a skill change, check every added line against the split rule in One source for rules, even when a relay says where to put it.
