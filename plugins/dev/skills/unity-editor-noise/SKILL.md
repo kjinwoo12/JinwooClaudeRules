@@ -19,7 +19,7 @@ Anything else (code, new assets, scenes or prefabs with content changes) is real
 
 ## 2. Act
 - Noise: never commit it, never carry it into a feature branch, never discard it. `git stash push -u -m "unity editor noise <cause>" -- <noise paths>` (pathspec, so other changes stay). Then work in the main folder as usual.
-- Real work this task did not make: leave it where it is and do the task in a worktree (general Worktree rule). Never mix it into the task's commits.
+- Real work this task did not make, or another task running in that folder: leave it where it is and do the task in a worktree (general Worktree rule). Never mix it into the task's commits.
 - This task's own files: keep. Before each commit, `git diff --cached --name-only` must hold no noise path; unstage any.
 
 ## 3. Report
