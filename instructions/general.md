@@ -4,7 +4,7 @@ Which skill when; details live in each skill. Project facts: `projects/<project>
 
 ## Triggers
 
-Read each skill from its link below (this repo, always current), not the Skill tool's synced copy, which can lag days behind.
+Skills are files in this repo, not installed plugins: when a trigger fits, read its linked SKILL.md.
 
 - First turn → [caveman:caveman](../plugins/caveman/skills/caveman/SKILL.md) (lite) and every skill in the start note.
 - Unity code, scenes, prefabs, SO, tests, design numbers → [dev:unity-work](../plugins/dev/skills/unity-work/SKILL.md)
@@ -44,7 +44,7 @@ Read each skill from its link below (this repo, always current), not the Skill t
 - **Worktree only with approval.** Before creating or using a git worktree (cloud or PC, Remote Control included), tell the user why and get their yes first; without a worktree, just proceed. Never a second clone. Repo folder busy (another thread, or real work this task didn't make): wait for it, or ask to use a worktree. Editor noise alone isn't busy (unity-editor-noise).
 - **Downloads.** CLI (curl, gh, API, package manager), cloud or PC, never a browser download dialog. Login-only site (e.g. Mixamo): its download button in the user's logged-in Chrome (Claude in Chrome tab), never a new window. Neither works: ask first.
 - **Blocked.** Try API, CLI, Chrome, Remote Control, folder access, another thread; then ask once: what, where, why, what you tried.
-- **One source for rules.** Skill or instruction change: edit kjinwoo12/JinwooClaudeRules, push to main; never propose_skills cards or a second copy. How to develop → this file or a dev skill; project facts only → its info.md. No hardcoded names or ids; point to the source. Read related skills first; a rule with its own trigger = its own skill; same-role skills merge. After the push, in Chrome: claude.ai Customize > Plugins > 추가 > 마켓플레이스 관리 > ⋯ > 업데이트 확인, and check 동기화된 커밋 is the pushed one. Report per file: path, lines added/removed/changed; no hash or link.
+- **One source for rules.** Skill or instruction change: edit kjinwoo12/JinwooClaudeRules, push to main; never propose_skills cards or a second copy. How to develop → this file or a dev skill; project facts only → its info.md. No hardcoded names or ids; point to the source. Read related skills first; a rule with its own trigger = its own skill; same-role skills merge. Report per file: path, lines added/removed/changed; no hash or link.
 
 ## Writing
 
