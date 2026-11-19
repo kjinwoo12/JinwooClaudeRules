@@ -9,3 +9,5 @@ description: "When starting or instructing a Remote Control session on the user'
 - The user's explicit PC command (e.g. a shutdown): run it as given after the work, never re-confirm; the user's message is the approval.
 - The user links a tool update: update it on the PC and connect it as MCP, no asking.
 - Check every RC report against the instructed scope. If it went beyond, stop it.
+- RC sees only the user's own messages, never the thread's. When the user answers a thread question that RC's work depends on, at once start a fresh RC on that answer's message with instructions that spell out the question and the change.
+- After handing work to RC, confirm it started and say so in one line; never end the turn on a reaction alone.
