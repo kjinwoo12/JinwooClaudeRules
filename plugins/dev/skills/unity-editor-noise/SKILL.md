@@ -19,7 +19,7 @@ Anything else (code, new assets, scenes or prefabs with content changes) is real
 
 ## 2. Act
 - Noise: never commit it, never carry it into a feature branch, never stash it (stashes pile up). The editor makes it again, so discard it: `git restore -- <tracked noise paths>`, and delete untracked noise files the same signatures cover. Then work in the main folder as usual.
-- Real work this task did not make, or another task running in that folder: leave it where it is; wait or ask (general no-worktree rule), no worktree unless the user asked. Never mix it into the task's commits.
+- Real work this task did not make, or another task running in that folder: leave it where it is; wait, or ask before using a worktree (general worktree rule). Never mix it into the task's commits.
 - This task's own files: keep. Before each commit, `git diff --cached --name-only` must hold no noise path; unstage any.
 
 ## 3. Report
