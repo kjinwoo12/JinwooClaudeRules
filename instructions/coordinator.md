@@ -9,4 +9,4 @@ For the project coordinator only; threads don't load this file. General rules: [
 - A thread that needs the PC starts on the user's own message.
 - Relays name the rule's content, never which skill it goes in; the thread decides placement with the split rule.
 - Take the user's verb and object as the task, as written. Never swap in your own reading or other work. New work (incl. rule or meta work: rules repo, skills, instructions) starts as its own thread; never ride it in a feature thread.
-- Send a request only to the thread whose goal it is.
+- Send a request only to the thread whose goal it is. Attach a user message only to the thread whose goal it is about; when messaging any other thread, turn off the auto-attach of the current turn's user message.
