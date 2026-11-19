@@ -1,11 +1,11 @@
 ---
 name: "unity-editor-noise"
-description: "Before checkout, new branch, worktree choice, or commit in a Unity repo with uncommitted changes: discard editor noise, move unrelated real work aside with a worktree"
+description: "Before checkout, new branch, or commit in a Unity repo with uncommitted changes: discard editor noise, leave unrelated real work alone"
 ---
 
 # Unity editor noise
 
-Run whenever a Unity repo has changes this task did not make, before switching branches, branching, choosing main folder vs worktree, or committing. Also after this task's own Play check or build. Decide by reading the diff; never ask the user which kind it is.
+Run whenever a Unity repo has changes this task did not make, before switching branches, branching, or committing. Also after this task's own Play check or build. Decide by reading the diff; never ask the user which kind it is.
 
 ## 1. Sort each changed file
 `git status --short`, then `git diff` per file. Noise signatures:
@@ -19,8 +19,8 @@ Anything else (code, new assets, scenes or prefabs with content changes) is real
 
 ## 2. Act
 - Noise: never commit it, never carry it into a feature branch, never stash it (stashes pile up). The editor makes it again, so discard it: `git restore -- <tracked noise paths>`, and delete untracked noise files the same signatures cover. Then work in the main folder as usual.
-- Real work this task did not make, or another task running in that folder: leave it where it is and do the task in a worktree (general Worktree rule). Never mix it into the task's commits.
+- Real work this task did not make, or another task running in that folder: leave it where it is; wait or ask (general no-worktree rule), no worktree unless the user asked. Never mix it into the task's commits.
 - This task's own files: keep. Before each commit, `git diff --cached --name-only` must hold no noise path; unstage any.
 
 ## 3. Report
-One line: files discarded as noise with cause; real changes left in place and the worktree used.
+One line: files discarded as noise with cause; real changes left in place.

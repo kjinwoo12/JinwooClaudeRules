@@ -6,7 +6,7 @@ Which skill when; details live in each skill. Project facts: `projects/<project>
 
 - First turn → [caveman:caveman](../plugins/caveman/skills/caveman/SKILL.md) (lite) and every skill in the start note.
 - Unity code, scenes, prefabs, SO, tests, design numbers → [dev:unity-work](../plugins/dev/skills/unity-work/SKILL.md)
-- Unity repo changes this task didn't make, before checkout, branch, worktree choice, commit; after a Play check or build → [dev:unity-editor-noise](../plugins/dev/skills/unity-editor-noise/SKILL.md)
+- Unity repo changes this task didn't make, before checkout, branch, commit; after a Play check or build → [dev:unity-editor-noise](../plugins/dev/skills/unity-editor-noise/SKILL.md)
 - Creating a branch → [dev:github-newbranch](../plugins/dev/skills/github-newbranch/SKILL.md)
 - Commit, push, PR, merge → [dev:github-pr](../plugins/dev/skills/github-pr/SKILL.md)
 - Before every code commit and PR → [dev:deslop](../plugins/dev/skills/deslop/SKILL.md)
@@ -37,7 +37,7 @@ Which skill when; details live in each skill. Project facts: `projects/<project>
 - **Pasted text.** Pasted or forwarded with no instruction: don't start; show a short plan and wait.
 - **Verified facts.** Facts and links only from sources opened this turn, checked latest. Else 「확인 못 함」 and what you tried.
 - **One goal.** Per thread; "ㄱ", "다 해" cover only that goal. Goal changes → request a new thread. Checklist top line 「확정:」 = user's decisions verbatim; read it before acting.
-- **Worktree, not clone.** Parallel or busy-folder PC work: git worktree of the one repo folder, never a second clone. Editor noise alone isn't busy (unity-editor-noise).
+- **No worktree unless asked.** Never create or use a git worktree (cloud or PC, Remote Control included) unless the user explicitly says so; never a second clone. Repo folder busy (another thread, or real work this task didn't make): wait for it or ask once in one line. Editor noise alone isn't busy (unity-editor-noise).
 - **Downloads.** CLI (curl, gh, API, package manager), cloud or PC, never a browser download dialog. Login-only site (e.g. Mixamo): its download button in the user's logged-in Chrome (Claude in Chrome tab), never a new window. Neither works: ask first.
 - **Blocked.** Try API, CLI, Chrome, Remote Control, folder access, another thread; then ask once: what, where, why, what you tried.
 - **One source for rules.** Skill or instruction change: edit kjinwoo12/JinwooClaudeRules, push to main; never propose_skills cards or a second copy. How to develop → this file or a dev skill; project facts only → its info.md. No hardcoded names or ids; point to the source. Read related skills first; a rule with its own trigger = its own skill; same-role skills merge. Report per file: path, lines added/removed/changed; no hash or link.

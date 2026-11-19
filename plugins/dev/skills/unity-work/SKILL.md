@@ -7,8 +7,8 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 
 ## Where and how
 - Write client code on the PC local repo through Remote Control (RC) from the start (remote-control).
-- Use Unity MCP on the open editor. If MCP fails, or the work is in a git worktree the open editor does not show, batchmode `-batchmode -nographics -quit -logFile <path>` with `-projectPath <that folder>`. No computer use.
-- Prefer not to launch the GUI editor (recommendation, not a ban). Launch it only for a step that neither CLI nor MCP on the open editor can do, such as a Play check in a worktree.
+- Use Unity MCP on the open editor. If MCP fails, batchmode `-batchmode -nographics -quit -logFile <path>` with `-projectPath <that folder>`. No computer use.
+- Prefer not to launch the GUI editor (recommendation, not a ban). Launch it only for a step that neither CLI nor MCP on the open editor can do, such as a Play check MCP can't run.
 
 ## Checks and tests
 - Per edit: compile and console only.
