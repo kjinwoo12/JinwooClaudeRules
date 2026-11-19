@@ -20,4 +20,4 @@
 
 ## Sources
 - Meeting minutes: the latest file in the project files meeting/ folder; the user-edited Discord version wins.
-- Game spec (기획서): see the team repo's CLAUDE.md. 「기획서로 남기자」 means a spec in that Drive folder, never a repo issue or PR.
+- Game spec (기획서): see the team repo's CLAUDE.md. Planning and design content (specs, plans, art or task lists) goes to Google Docs in that Drive folder, never into the repo (no repo doc, issue, or PR for it).

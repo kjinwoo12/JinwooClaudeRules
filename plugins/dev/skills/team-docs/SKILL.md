@@ -6,7 +6,7 @@ description: "Repo docs or text teammates read (issue and PR bodies, comments, c
 # Team doc rules
 
 ## Where
-- Team docs go in the repo, written locally. Artifacts only for showing the user.
+- Repo docs (how to work in the repo) go in the repo, written locally. Planning and design content is not a repo doc; it goes where the project's info.md says. Artifacts only for showing the user.
 - Doc work needs no asking (edit, commit, self-merge of doc-only PRs).
 
 ## What

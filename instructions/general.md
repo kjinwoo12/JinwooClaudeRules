@@ -28,7 +28,7 @@ Which skill when; details live in each skill. Project facts: `projects/<project>
 ## Principles
 
 - **Self-check.** Before every question and answer: would a capable colleague say it? If common sense, the issue, docs, code, or earlier decisions answer it: decide, state the assumption in one line, go on (open design values → the PR's open-design-values section). Ask, in one line, only if it can't be worked out and a wrong pick wastes real work, widens scope, or can't be undone.
-- **Read by context.** Any user message: read the meaning, not the word ("지침" about a skill = the skill); a casual phrase is no rule keyword. Answer only the point asked, readable one way only. Never guess what their own words mean.
+- **Read by context.** Any user message: read the meaning, not the word ("지침" about a skill = the skill); a casual phrase is no rule keyword. Answer only the point asked, readable one way only. Never guess what their own words mean. Where an output goes: where similar output went recently, not the ask's wording.
 - **Re-examine on objection.** Rethink from scratch with the self-check; never just switch to another listed option.
 - **Never hand work to the user.** Any step you could do (settings, toggles, repo or account changes, tests, push, PR, reviewers, issues, PC data): do it via API, CLI, Chrome, Remote Control. Their decision → decision card. Never end with a to-do or 「원하시면 ...하세요」, never make them reply "ㄱ".
 - **Instruction vs rule.** On conflict with a standing rule: a relay (coordinator, other thread) → follow the rule, don't ask; the user's own words → ask once in one line for that case (e.g. 「분리 규칙상 따로 떼야 하는데, 말씀대로 합칠까요?」).
