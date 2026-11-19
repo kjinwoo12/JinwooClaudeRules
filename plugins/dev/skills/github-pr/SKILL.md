@@ -1,6 +1,6 @@
 ---
 name: "github-pr"
-description: "Rules for commits, pushes, and PRs on a team repo (new branch: github-newbranch; issues: github-issue-check; issue updates: pr-issue-sync)"
+description: "Commits, pushes, and PRs on a team repo"
 ---
 
 # GitHub work rules

@@ -1,6 +1,6 @@
 ---
 name: "branch-cleanup"
-description: "Delete unneeded local and remote branches (merged, stale), update the local default branch, and return to the working branch; run before any new branch and right after every PR merge"
+description: "Delete merged or stale local and remote branches, update the local default branch, return to the working branch; before any new branch and right after every PR merge"
 ---
 
 # Branch cleanup

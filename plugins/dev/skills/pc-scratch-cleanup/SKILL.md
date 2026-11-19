@@ -1,6 +1,6 @@
 ---
 name: "pc-scratch-cleanup"
-description: "At the end of every task that wrote files on the user's PC, delete the scratch files it left in the work folder (logs, test results, screenshots, patches, temp dirs)"
+description: "End of every task that wrote files on the user's PC: delete its scratch files in the work folder (logs, test results, screenshots, patches, temp dirs)"
 ---
 
 # PC scratch cleanup

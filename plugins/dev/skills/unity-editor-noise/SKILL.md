@@ -1,6 +1,6 @@
 ---
 name: "unity-editor-noise"
-description: "Before a checkout, new branch, worktree choice, or commit in a Unity repo with uncommitted changes: tell Unity editor noise from real work, discard the noise, and move real unrelated work out of the way with a worktree"
+description: "Before checkout, new branch, worktree choice, or commit in a Unity repo with uncommitted changes: discard editor noise, move unrelated real work aside with a worktree"
 ---
 
 # Unity editor noise

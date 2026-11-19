@@ -1,6 +1,6 @@
 ---
 name: "pr-review"
-description: "Before opening a PR: run local /code-review, put its result in the PR template's AI review section, and stop to report any bug it finds"
+description: "Before opening a PR: run local /code-review, put the result in the PR template's AI review section, stop and report any bug"
 ---
 
 # Pre-PR review

@@ -1,6 +1,6 @@
 ---
 name: "team-docs"
-description: "Rules for writing repo docs or text that goes to teammates (issue and PR bodies, comments, comment drafts, guides, notices)"
+description: "Repo docs or text teammates read (issue and PR bodies, comments, comment drafts, guides, notices)"
 ---
 
 # Team doc rules

@@ -1,6 +1,6 @@
 ---
 name: "unity-work"
-description: "Rules for Unity code, scenes, prefabs, SO, tests, and design work (Unity MCP, batchmode, test timing, no hardcoding)"
+description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, batchmode, test timing, no hardcoding)"
 ---
 
 # Unity work rules

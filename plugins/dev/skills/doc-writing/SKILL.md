@@ -1,6 +1,6 @@
 ---
 name: "doc-writing"
-description: "When writing or cleaning up any document (planning doc, spec draft, Claude Doc, minutes, report, repo doc): content only, no meta text about the doc or the process, one way to read, no duplicate sections"
+description: "Writing or cleaning up any document (plan, spec draft, Claude Doc, minutes, report, repo doc): content only, no meta text, one way to read, no duplicate sections"
 ---
 
 # Doc writing

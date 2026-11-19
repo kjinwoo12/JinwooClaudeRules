@@ -1,6 +1,6 @@
 ---
 name: "deslop"
-description: "Before every commit or PR of code: clean AI slop from the diff (needless defensive checks, casts, nesting, patterns foreign to the file) without changing behavior"
+description: "Before every code commit or PR: strip AI slop from the diff (needless defensive checks, casts, nesting, patterns foreign to the file) without changing behavior"
 ---
 
 # Deslop

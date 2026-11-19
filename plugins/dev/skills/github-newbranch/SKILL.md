@@ -1,6 +1,6 @@
 ---
 name: "github-newbranch"
-description: "Steps for creating any new branch on a team repo (branch cleanup first, issue, name, base)"
+description: "Creating any new branch on a team repo: cleanup first, issue, name, base"
 ---
 
 # New branch

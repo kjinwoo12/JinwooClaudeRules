@@ -1,6 +1,6 @@
 ---
 name: "issue-board-sync"
-description: "Update GitHub issue cards and the project board to match meeting minutes or current work (comments, new issues, statuses, relations)"
+description: "Sync GitHub issue cards and the project board with meeting minutes or current work (comments, new issues, statuses, relations)"
 ---
 
 Use when asked to tidy or update issue cards or the kanban board (e.g. from meeting minutes, or to reflect current work). Per-issue fields follow github-issue-check; team-facing text follows team-docs.

@@ -1,6 +1,6 @@
 ---
 name: "github-issue-check"
-description: "Checklist when creating or editing a GitHub issue (incl. recording decisions on it): duplicates, milestone, assignee, label, board, relations"
+description: "Creating or editing a GitHub issue or recording a decision on it: duplicates, milestone, assignee, label, board, relations"
 ---
 
 GitHub API first (MCP, else REST/GraphQL, gh). Chrome only when the API cannot do it at all.
