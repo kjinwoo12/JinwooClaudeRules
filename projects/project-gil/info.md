@@ -10,6 +10,7 @@
 - PR template: AI review section 「AI 리뷰」; open design values 「기획 확인 필요」; work left 「남은 일」.
 - Issue needing 총괄 확인 after merge: `Refs #N`.
 - Self-merge: doc-only PRs, except `.github/workflows/` and `.github/CODEOWNERS`.
+- 2026-11-16 to 2026-11-22 (reviewer away, user 「이번주 셀프머지」): self-merge every PR once its checks pass, no review wait or ask. From 2026-11-23, the line above again.
 - LFS: png and jpg.
 - Unity code-rule tests: EditMode CodeRules (no hardcoding, no runtime bootstrap). Play check: docs/PLAY_CHECK.md. PR review steps: docs/REVIEW.md.
 
