@@ -1,7 +1,11 @@
 // PreToolUse hook (Bash, PowerShell): deny any command that moves a board card to the sign-off status (총괄 확인).
 const { execFileSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const SIGNOFF = '총괄';
+const WINGET_GH = path.join(process.env.LOCALAPPDATA ?? '', 'Programs', 'GitHub CLI', 'bin', 'gh.exe');
+const GH = fs.existsSync(WINGET_GH) ? WINGET_GH : 'gh';
 const BOARD_EDIT = /item-edit|updateProjectV2ItemFieldValue/;
 
 function deny(reason) {
@@ -13,7 +17,7 @@ function deny(reason) {
 
 function signoffOptionIds(projectId) {
   const query = 'query($id:ID!){node(id:$id){... on ProjectV2{fields(first:50){nodes{... on ProjectV2SingleSelectField{options{id name}}}}}}}';
-  const out = execFileSync('gh', ['api', 'graphql', '-f', `query=${query}`, '-f', `id=${projectId}`], { encoding: 'utf8' });
+  const out = execFileSync(GH, ['api', 'graphql', '-f', `query=${query}`, '-f', `id=${projectId}`], { encoding: 'utf8' });
   return JSON.parse(out).data.node.fields.nodes
     .flatMap(field => field.options ?? [])
     .filter(option => option.name.includes(SIGNOFF))
