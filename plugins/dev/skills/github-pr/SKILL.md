@@ -6,7 +6,7 @@ description: "Commits, pushes, and PRs on a team repo"
 # GitHub work rules
 
 ## Tools
-- GitHub work via API (MCP, else REST/GraphQL, gh). Chrome only when the API cannot do it at all.
+- GitHub work via API (MCP, else REST/GraphQL, gh). Chrome only when none of them can do it (an on-screen step: general Hands off the user's screen).
 - Anything teammates can see: no claude.ai link, except the auto-added commit lines below. A "Generated with Claude Code" footer is fine.
 
 ## Branch and git

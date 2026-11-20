@@ -17,4 +17,4 @@ Use when asked to tidy or update issue cards or the kanban board (e.g. from meet
 6. Verify on the board view that no open current-milestone card is left in Backlog.
 7. One reply: new issues, commented issues, status moves, relations, skipped items, all as issue links.
 
-Board status via Chrome (the API cannot reach the project board): issue page sidebar Projects > Status, then click the option. Typing a name and pressing Enter toggles the highlighted option off and leaves No status.
+Board status via gh CLI, never Chrome: ids from `gh project view`, `gh project field-list`, `gh project item-list` (`<board number> --owner <org> --format json`, board: project info), then `gh project item-edit --id <item> --project-id <project> --field-id <Status field> --single-select-option-id <option>`. Cloud threads run it on the PC (Remote Control); gh in the cloud is search-only.
