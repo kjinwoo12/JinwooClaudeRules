@@ -20,6 +20,7 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 보드 카드를 총괄 확인으로 옮기지 않는다 | `hooks/block-signoff-status.js` | PC |
 | 사용자 화면에 창을 띄우지 않는다(Unity, Blender, Chrome, Start-Process) | `hooks/block-visible-windows.js` | PC |
 | Chrome은 탭 하나만, 새 창 없이 쓴다 | `hooks/block-extra-chrome-tabs.js` | 클라우드 |
+| 작업 폴더 안 파일 삭제는 허용 버튼 없이 한다 | `hooks/allow-workfolder-deletes.js` | PC |
 | 워크트리가 거부되면 묻지 않고 메인 폴더 새 브랜치로 계속한다 | `hooks/worktree-fallback.js` | PC |
 | 사용자에게 스레드에 한 줄을 적어 달라고 하지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | 시킨 일, 머지, 찾은 버그 수정을 되묻지 않는다 | `hooks/block-asking.js` | 클라우드 |

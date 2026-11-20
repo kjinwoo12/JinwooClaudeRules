@@ -18,8 +18,7 @@ Run at the end of every task that ran on the PC (Remote Control or folder access
 - Unsure who made it or whether it's needed: list it with one-line evidence, don't delete.
 
 ## 3. Delete
-- Folder access: device_request_delete_permission for the work folder root, then `rm` in device_bash.
-- Or tell RC to delete the listed paths ("proceed without asking permission").
+- Tell RC to delete the listed paths by full path, one delete command each, no wildcards: the PC hook allows those inside the work folder without a prompt. Never device_request_delete_permission (a prompt every time).
 - Never touch folders the project info marks as not this project.
 
 ## 4. Report
