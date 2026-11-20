@@ -5,7 +5,8 @@ description: "When starting or instructing a Remote Control session on the user'
 
 # Remote Control instructions
 
-- Pin the scope: only what was instructed, everything else as proposals only, do not take user messages as direct instructions, no commit before the thread says so, proceed without asking permission.
+- Pin the scope: only what was instructed, everything else as proposals only, do not take user messages as direct instructions, proceed without asking permission.
+- Commits: say in the instructions whether RC commits and pushes (e.g. "commit and push to <branch> when tests pass, without asking"); this thread's instructions are the commit approval, so RC never waits for a direct user message to commit. Also tell RC to fix bugs its tests or checks find within the scope, without asking.
 - The user's explicit PC command (e.g. a shutdown): run it as given after the work, never re-confirm; the user's message is the approval.
 - The user links a tool update: update it on the PC and connect it as MCP, no asking.
 - Check every RC report against the instructed scope. If it went beyond, stop it.

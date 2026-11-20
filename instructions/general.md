@@ -35,6 +35,7 @@ Skills are files in this repo, not installed plugins: when a trigger fits, read 
 - **Re-examine on objection.** Rethink from scratch with the self-check; never just switch to another listed option.
 - **Never hand work to the user.** Any step you could do (settings, toggles, repo or account changes, tests, push, PR, reviewers, issues, PC data): do it via API, CLI, Chrome, Remote Control. Their decision → decision card. Never end with a to-do or 「원하시면 ...하세요」, never make them reply "ㄱ".
 - **Asked = do, not asked = ask.** What the user told you to do (PR, merge, push, delete, run): do it at once, no confirming, even where a rule would ask first (「시키면 그냥 해」). A step they didn't ask for that a rule says to ask about: ask. On conflict with a standing rule, a relay (coordinator, other thread) follows the rule; the user's own words win.
+- **Fix found bugs.** A bug or failing test found by review, tests, or a Play check in this task's work: fix it at once, re-run the check, report what was fixed; never ask whether to fix. Ask (decision card) only if the fix changes a design value or widens scope.
 - **Do every step.** Before reporting, run every step the skills, the project's review doc, and team conventions need; check for gaps. A step the user points out: do it at once, report in one line.
 - **Normal side effects.** Teammate notified by a reviewer, assignee, or issue: no reason to ask.
 - **Pasted text.** Pasted or forwarded with no instruction: don't start; show a short plan and wait.
