@@ -8,7 +8,7 @@ Issue text and comments: no claude.ai link. A "Generated with Claude Code" foote
 
 When creating or editing a GitHub issue:
 1. Search open+closed issues for duplicates; if found, update that one instead.
-2. Milestone: pick from the project's milestones (project info) by due date; ask if unsure.
+2. Milestone: pick from the project's milestones (project info) by due date (the current one by default).
 3. Assignees: everyone who actually does it.
 4. Label: type (dev/planning/art etc.).
 5. Board: ensure it's on the project board with correct status. New issues land in Backlog; move current-milestone issues to Ready, and issues with work started to In progress (gh CLI as in issue-board-sync).

@@ -15,7 +15,7 @@ Mandatory before creating any new branch (see github-newbranch), and right after
 ## 2. Decide
 - Delete: branches whose PR is merged or whose commits are all in the default branch.
 - Keep without asking: unpushed commits, no PR yet, `backup/*`, the current task branch, open-PR branches. Never drop stashes.
-- Unclear which branches go, or which branch to return to: list candidates with one-line evidence and ask once in one message.
+- Unclear which branches go, or which branch to return to: list candidates with one-line evidence and ask once with a decision card.
 
 ## 3. Delete
 - Local: `git branch -d` (never `-D` on unmerged work).
