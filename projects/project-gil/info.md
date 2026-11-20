@@ -17,7 +17,7 @@
 ## PC
 - Work folder: F:\git\ProjectGilOrganization (also for non-Unity work). Unity repo: F:\git\ProjectGilOrganization\ProjectGilRpgClient.
 - Not this project, never touch unless the user names it: F:\git\GilSample (personal portfolio). Scene names in asks (e.g. 쇼케이스) mean the team repo's scenes.
-- Hooks: `F:\git\ProjectGilOrganization\.claude\settings.local.json` runs the rules clone's `hooks/` scripts (SessionStart pull; PreToolUse `block-signoff-status.js` denies moving a board card to 총괄 확인).
+- Hooks: `F:\git\ProjectGilOrganization\.claude\settings.local.json` runs the rules clone's `hooks/` scripts (SessionStart pull; PreToolUse on Bash and PowerShell: `block-signoff-status.js` denies moving a board card to 총괄 확인, `block-visible-windows.js` denies launching a visible Unity, Blender, Chrome, or Start-Process window).
 - Shutdown: run `F:\git\ProjectGilOrganization\shutdown.bat`, never raw `shutdown`; only when the user orders it for that ask, never carried over.
 
 ## Sources

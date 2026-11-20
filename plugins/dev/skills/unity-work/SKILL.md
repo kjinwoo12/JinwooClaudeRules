@@ -10,7 +10,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 - No PC access yet (e.g. waiting for the user's line in this thread): read and plan only. Never write client code in the cloud to carry over.
 - Use Unity MCP on the open editor. If MCP fails, batchmode `-batchmode -nographics -quit -logFile <path>` with `-projectPath <that folder>`. No computer use.
 - Start Unity.exe hidden (`Start-Process -WindowStyle Hidden`, general Hands off the user's screen) with `-batchmode -nographics`; a run that needs rendering (play capture) drops only `-nographics`. Few launches: one run per test platform per feature.
-- Prefer not to launch the GUI editor (recommendation, not a ban). Launch it only for a step that neither CLI nor MCP on the open editor can do, such as a Play check MCP can't run.
+- Never launch the GUI editor (a PC hook denies it). A step neither batchmode nor MCP on the open editor can do: report it.
 
 ## Checks and tests
 - Per edit: compile and console only.
