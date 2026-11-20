@@ -7,6 +7,8 @@ Which skill when; details live in each skill. Project facts: `projects/<project>
 Skills are files in this repo, not installed plugins: when a trigger fits, read its linked SKILL.md.
 
 - First turn → [caveman:caveman](../plugins/caveman/skills/caveman/SKILL.md) (lite) and every skill in the start note.
+- Before creative work (new feature or component, behavior change, planning anything new) → [superpowers:brainstorming](../plugins/superpowers/skills/brainstorming/SKILL.md)
+- Approved design or spec for a multi-step task, before touching code → [superpowers:writing-plans](../plugins/superpowers/skills/writing-plans/SKILL.md)
 - Unity code, scenes, prefabs, SO, tests, design numbers → [dev:unity-work](../plugins/dev/skills/unity-work/SKILL.md)
 - Unity repo changes this task didn't make, before checkout, branch, commit; after a Play check or build → [dev:unity-editor-noise](../plugins/dev/skills/unity-editor-noise/SKILL.md)
 - Git worktree approved, or its branch merged → [dev:pc-worktree](../plugins/dev/skills/pc-worktree/SKILL.md)
