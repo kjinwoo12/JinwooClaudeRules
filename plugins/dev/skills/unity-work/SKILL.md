@@ -9,6 +9,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 - Write client code on the PC local repo through Remote Control (RC) from the start (remote-control).
 - No PC access yet (e.g. waiting for the user's line in this thread): read and plan only. Never write client code in the cloud to carry over.
 - Use Unity MCP on the open editor. If MCP fails, batchmode `-batchmode -nographics -quit -logFile <path>` with `-projectPath <that folder>`. No computer use.
+- Every Unity.exe launch keeps `-nographics` and can still take focus, so launch as few as possible: one run per test platform per feature. A run that needs graphics (play capture, rendering) is on-screen (general Hands off the user's screen): card first, all such work in one launch.
 - Prefer not to launch the GUI editor (recommendation, not a ban). Launch it only for a step that neither CLI nor MCP on the open editor can do, such as a Play check MCP can't run.
 
 ## Checks and tests
