@@ -26,3 +26,4 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 사용자에게 스레드에 한 줄을 적어 달라고 하지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | 시킨 일, 머지, 찾은 버그 수정을 되묻지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | 했다고 말할 때 근거(링크, 경로, 인용)를 붙인다 | `hooks/block-asking.js` | 클라우드 |
+| 작업 중 진행 상황 메시지를 따로 보내지 않는다 | `hooks/block-asking.js` | 클라우드 |

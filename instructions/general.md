@@ -53,6 +53,7 @@ Skills are files in this repo, not installed plugins: when a trigger fits, read 
 ## Writing
 
 - Short replies, lists of 3 lines max, evidence as a one-line quote.
+- **Few thread messages.** Every thread reply wakes the coordinator, which re-reads its whole context. Post only to (1) ask the user (question or decision card), (2) report a finished result, (3) report a block. No progress posts (starting, running tests, PR opened and merging after checks, cleaning up): progress goes on the checklist, and a PR link and cleanup go in the one result message. A direct user question gets its answer; new work gets a reaction, not a message.
 - No middle dot (·); use comma, 와/과, or /.
 - Link every issue mention as a full issue URL.
 - Instructions, memory, skills in English (Korean only for literal strings); replies and team text in Korean.
