@@ -1,5 +1,5 @@
-// PreToolUse hook (Bash, PowerShell): keep the fixed worktree pool. Deny removing a worktree and adding one outside the pool (`-wt<n>`).
-const REMOVE = /\bgit\b[^\n;|&]*\bworktree\s+remove\b/i;
+// PreToolUse hook (Bash, PowerShell): keep the fixed worktree pool (`-wt<n>`). Deny removing a pool worktree and adding one outside the pool.
+const REMOVE = /\bgit\b[^\n;|&]*\bworktree\s+remove\b([^\n;|&]*)/i;
 const ADD = /\bgit\b[^\n;|&]*\bworktree\s+add\b([^\n;|&]*)/i;
 const POOL_PATH = /-wt\d+["']?(\s|$)/i;
 
@@ -13,8 +13,9 @@ let input = '';
 process.stdin.on('data', chunk => { input += chunk; });
 process.stdin.on('end', () => {
   const command = JSON.parse(input).tool_input?.command ?? '';
-  if (REMOVE.test(command)) {
-    deny('워크트리는 지우지 않고 재사용한다(pc-worktree). 머지 뒤에는 워크트리를 기본 브랜치 detached로 돌리고 브랜치만 지운다.');
+  const remove = command.match(REMOVE);
+  if (remove && POOL_PATH.test(remove[1] + ' ')) {
+    deny('풀 워크트리는 지우지 않고 재사용한다(pc-worktree). 머지 뒤에는 워크트리를 기본 브랜치 detached로 돌리고 브랜치만 지운다.');
     return;
   }
   const add = command.match(ADD);

@@ -21,3 +21,4 @@ The PC keeps a fixed pool of worktrees (paths: project info), reused job after j
 
 ## After merge
 - With branch-cleanup: `git -C <wt> switch --detach <main repo remote>/<default branch>`, then delete the branch. The worktree stays, now free.
+- A worktree outside the pool (made before the pool): `git worktree remove <path>`, then delete the branch.
