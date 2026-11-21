@@ -21,5 +21,5 @@ The PC keeps a fixed pool of worktrees (paths: project info), reused job after j
 
 ## After merge
 - With branch-cleanup: `git -C <wt> switch --detach <main repo remote>/<default branch>`, then delete the branch. The worktree stays, now free.
-- Then finish branch-cleanup in the main folder too (default branch updated and pushed to the fork), unless someone is working there (real uncommitted work per unity-editor-noise, or checked out on another task's unmerged branch); then ask by decision card before switching. Never stop at fetch.
+- Then finish branch-cleanup in the main folder too (default branch updated and pushed to the fork), unless someone is working there (real uncommitted work per unity-editor-noise, or checked out on another task's unmerged branch); then don't switch: message that task's thread to run it when its work ends (its own post-merge branch-cleanup), or, if no thread owns it (the user's own work), schedule a recheck and run it once the folder is clean. Never stop at fetch.
 - A worktree outside the pool (made before the pool): `git worktree remove <path>`, then delete the branch.
