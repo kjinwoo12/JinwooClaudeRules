@@ -14,7 +14,10 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 
 ## Checks and tests
 - Per edit: compile and console only.
-- EditMode and PlayMode tests once at the end of a feature, before commit. Never ask the user to run tests.
+- While working: run only the tests related to the change (`-testFilter`), before commit.
+- Right before merge: the full EditMode and PlayMode suite once; every test must pass. Never merge past a failure called "known" or "pre-existing": fix it, or stop and report.
+- Change touches no code, scene, prefab, SO, or other asset (docs, rules, workflows only): no Unity tests.
+- Never ask the user to run tests.
 
 ## Code
 - No hardcoding: tunable values in SerializeField or SO, other fixed values as named constants. No magic numbers.
