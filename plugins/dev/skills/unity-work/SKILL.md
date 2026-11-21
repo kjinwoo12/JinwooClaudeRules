@@ -15,6 +15,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 ## Checks and tests
 - Per edit: compile and console only.
 - While working: run only the tests related to the change (`-testFilter`), before commit.
+- PlayMode runs on the PC are silent (user heard test sounds, 11/21): before the run set that folder's `ProjectSettings/AudioManager.asset` `m_DisableAudio: 1` (open editor: `EditorUtility.audioMasterMute = true`), revert after, never commit it.
 - Right before merge: the full EditMode and PlayMode suite once; every test must pass. Never merge past a failure called "known" or "pre-existing": fix it, or stop and report.
 - Change touches no code, scene, prefab, SO, or other asset (docs, rules, workflows only): no Unity tests.
 - Never ask the user to run tests.
