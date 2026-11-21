@@ -16,7 +16,8 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 - Per edit: compile and console only.
 - While working: run only the tests related to the change (`-testFilter`), before commit.
 - PlayMode runs on the PC are silent (user heard test sounds, 11/21): before the run set that folder's `ProjectSettings/AudioManager.asset` `m_DisableAudio: 1` (open editor: `EditorUtility.audioMasterMute = true`), revert after, never commit it.
-- Before merge: only the tests related to the change, plus the EditMode CodeRules tests (project info); every test run must pass. No full-suite run (user 11/21: 「수정한 부분만 테스트해」). Never merge past a failure called "known" or "pre-existing": fix it, or stop and report.
+- Before commit and merge: the full EditMode suite, plus PlayMode tests related to the change only; every test run must pass (user 11/21: PlayMode is slow).
+- Full PlayMode suite: only before a release (a release branch per git flow, project info), never per PR. Never merge past a failure called "known" or "pre-existing": fix it, or stop and report.
 - Change touches no code, scene, prefab, SO, or other asset (docs, rules, workflows only): no Unity tests.
 - Never ask the user to run tests.
 
