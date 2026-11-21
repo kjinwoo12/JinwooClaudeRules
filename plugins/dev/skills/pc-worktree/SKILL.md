@@ -1,6 +1,6 @@
 ---
 name: "pc-worktree"
-description: "PC repo work in a git worktree (main folder busy, parallel jobs, or the user asked): take a free worktree from the fixed pool through Remote Control, and hand it back after merge"
+description: "PC repo work in a git worktree, only when the main folder is busy or the user asked (main folder first, general): take a free worktree from the fixed pool through Remote Control, and hand it back after merge"
 ---
 
 # PC worktree
