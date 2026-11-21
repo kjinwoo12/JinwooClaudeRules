@@ -12,7 +12,7 @@
 - Self-merge: doc-only PRs, except `.github/workflows/` and `.github/CODEOWNERS`.
 - 2026-11-16 to 2026-11-22 (reviewer away, user 「이번주 셀프머지」): self-merge every PR once its checks pass, no review wait or ask. From 2026-11-23, the line above again.
 - LFS: png and jpg.
-- Unity code-rule tests: EditMode CodeRules (no hardcoding, no runtime bootstrap). Play check: docs/PLAY_CHECK.md. PR review steps: docs/REVIEW.md.
+- Unity code-rule tests: EditMode CodeRules (no hardcoding, no runtime bootstrap). Full PlayMode run: without `-nographics` (BossHall_Level's realtime reflection probe crashes Unity under it, 11/21). Play check: docs/PLAY_CHECK.md. PR review steps: docs/REVIEW.md.
 
 ## PC
 - Work folder: F:\git\ProjectGilOrganization (also for non-Unity work). Unity repo: F:\git\ProjectGilOrganization\ProjectGilRpgClient.
