@@ -1,22 +1,23 @@
 ---
 name: "pc-worktree"
-description: "The user approved a git worktree for PC repo work (main folder busy, or they asked for one), or a worktree's branch merged: open it from a cloud thread through Remote Control, remove it after merge"
+description: "PC repo work in a git worktree (main folder busy, parallel jobs, or the user asked): take a free worktree from the fixed pool through Remote Control, and hand it back after merge"
 ---
 
 # PC worktree
 
-Only after the user's yes (general worktree rule).
+The PC keeps a fixed pool of worktrees (paths: project info), reused job after job so each keeps its Unity Library. Never create a per-issue worktree, never remove a pool worktree.
 
-## Where it can be made
+## Where it runs
 - A thread running on the PC itself cannot create a worktree (its platform instructions forbid it). A cloud thread can: start Remote Control in the PC work folder (project info) and put the worktree steps in its instructions (remote-control).
 
 ## RC instructions
 - Main folder is off limits: only `git fetch` there. No checkout, switch, restore, reset, stash, or cherry-pick; never touch its open editor or its Unity MCP. Branch cleanup that needs switching waits; list merged branches as proposals.
-- `git worktree add <repo folder>-<issue> -b <branch> <main repo remote>/<default branch>` (names: project info). Folder or branch already exists: stop and report.
-- Never copy the main folder's Library into the worktree; let Unity import fresh. A copied Library made unrelated tests fail.
+- Free worktree = detached HEAD and clean (`git -C <wt> symbolic-ref -q HEAD` fails, `git -C <wt> status --porcelain` empty). On a branch = busy; never touch it.
+- Take the first free one: `git -C <wt> switch -c <branch> <main repo remote>/<default branch>` after `git fetch`. All busy: general worktree rule's fallback (main folder, new branch).
+- A pool path missing (first use): `git worktree add --detach <path> <main repo remote>/<default branch>`, then take it. Never copy the main folder's Library into it; let Unity import fresh. A copied Library made unrelated tests fail.
 - Unity: batchmode with `-projectPath <worktree>` for import, compile, and tests. Play check: a second editor on the worktree only, never the user's editor; if Unity MCP can't target it without touching the main editor's, skip the play check and say why.
 - Commit and push from the worktree (github-pr). Scratch files outside the repo, deleted at the end.
-- Report the worktree path. Keep the folder until its PR merges.
+- Report the worktree path. Keep it on the branch until its PR merges.
 
 ## After merge
-- With branch-cleanup: `git worktree remove <path>`, then delete the branch.
+- With branch-cleanup: `git -C <wt> switch --detach <main repo remote>/<default branch>`, then delete the branch. The worktree stays, now free.

@@ -16,9 +16,10 @@
 
 ## PC
 - Work folder: F:\git\ProjectGilOrganization (also for non-Unity work). Unity repo: F:\git\ProjectGilOrganization\ProjectGilRpgClient.
+- Worktree pool (user 11/21, slow per-issue worktrees): `F:\git\ProjectGilOrganization\ProjectGilRpgClient-wt1`, `-wt2`, `-wt3`; with the main folder, up to 4 jobs at once.
 - Not this project, never touch unless the user names it: F:\git\GilSample (personal portfolio). Scene names in asks (e.g. 쇼케이스) mean the team repo's scenes.
 - Permissions: that file and `ProjectGilRpgClient\.claude\settings.local.json` allow `Bash(git *)`, `PowerShell(git *)`, `Bash(gh *)`, `PowerShell(gh *)` (user 11/20: all git allowed, no deny); allow rules resolve before the auto-mode classifier.
-- Hooks (rule-check table: rules repo README): `F:\git\ProjectGilOrganization\.claude\settings.local.json` runs the rules clone's `hooks/` scripts (SessionStart pull; PreToolUse on Bash and PowerShell: `block-signoff-status.js` denies moving a board card to 총괄 확인, `block-visible-windows.js` denies launching a visible Unity, Blender, Chrome, or Start-Process window).
+- Hooks (rule-check table: rules repo README): `F:\git\ProjectGilOrganization\.claude\settings.local.json` runs the rules clone's `hooks/` scripts (SessionStart pull; PreToolUse on Bash and PowerShell: `block-signoff-status.js` denies moving a board card to 총괄 확인, `block-visible-windows.js` denies launching a visible Unity, Blender, Chrome, or Start-Process window, `block-worktree-churn.js` denies removing a worktree or adding one outside the pool).
 - Shutdown: run `F:\git\ProjectGilOrganization\shutdown.bat`, never raw `shutdown`; only when the user orders it for that ask, never carried over.
 
 ## Sources
