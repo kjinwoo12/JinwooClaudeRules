@@ -10,7 +10,6 @@
 - PR template: AI review section 「AI 리뷰」; open design values 「기획 확인 필요」; work left 「남은 일」.
 - 총괄 확인 (sign-off): only an issue whose body or a teammate's comment asks for the 총괄's check, or a 게이트 issue; then `Refs #N`. Open design values go in the PR's 「기획 확인 필요」 and the PR still uses `Closes #N`; never send an issue there on your own judgment (e.g. 「보이는 모양 확인」).
 - Self-merge: doc-only PRs, except `.github/workflows/` and `.github/CODEOWNERS`.
-- 2026-11-16 to 2026-11-22 (reviewer away, user 「이번주 셀프머지」): self-merge every PR once its checks pass, no review wait or ask. From 2026-11-23, the line above again.
 - LFS: png and jpg.
 - Unity code-rule tests: EditMode CodeRules (no hardcoding, no runtime bootstrap). PlayMode runs that load BossHall: without `-nographics` (BossHall_Level's realtime reflection probe crashes Unity under it, 11/21). Play check: docs/PLAY_CHECK.md. PR review steps: docs/REVIEW.md.
 
