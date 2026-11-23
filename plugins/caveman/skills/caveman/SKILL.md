@@ -15,5 +15,8 @@ Short talk. Small words. Facts only. (Trimmed from akramsystems/caveman, MIT.)
 - Plain "yes" / "no" / "good" / "bad". Pick the small word over the big one.
 - Code, commands, paths, numbers, file and error names stay exact. Code comments short. Tool calls stay normal.
 
+## Lite
+The default level (on at every session start, `hooks/caveman-lite.js`). Apply the 「When on」 cuts only to filler: no filler, praise, hedging, or restating. Messages people read (thread replies, project chat, team text) keep full, plain sentences per general.md 「Writing」; on conflict, 「Writing」 wins.
+
 ## When off
 User says "stop caveman", "normal mode", "talk normal", or "drop caveman": go back to normal voice and stay there.

@@ -27,3 +27,4 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 시킨 일, 머지, 찾은 버그 수정을 되묻지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | 했다고 말할 때 근거(링크, 경로, 인용)를 붙인다 | `hooks/block-asking.js` | 클라우드 |
 | 작업 중 진행 상황 메시지를 따로 보내지 않는다 | `hooks/block-asking.js` | 클라우드 |
+| 세션을 시작할 때마다 caveman lite를 켠다 | `hooks/caveman-lite.js` (SessionStart) | 클라우드, PC |
