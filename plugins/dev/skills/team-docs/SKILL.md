@@ -7,7 +7,7 @@ description: "Repo docs or text teammates read (issue and PR bodies, comments, c
 
 ## Where
 - Repo docs (how to work in the repo) go in the repo, written locally. Planning and design content is not a repo doc; it goes where the project's info.md says. Artifacts only for showing the user.
-- Doc work needs no asking (edit, commit, self-merge of doc-only PRs).
+- Doc work needs no asking (edit, commit, self-merge).
 
 ## What
 - No separate documents outside the thread goal.

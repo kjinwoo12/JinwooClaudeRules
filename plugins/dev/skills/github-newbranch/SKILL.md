@@ -6,6 +6,7 @@ description: "Creating any new branch on a team repo: cleanup first, issue, name
 # New branch
 
 Also follow github-pr. Run every step, in order, each time a new branch is made.
+Keep working on an existing branch only while its PR is not merged; after a merge, always a new branch.
 
 1. Cleanup: run branch-cleanup, every step. Never skip it, even with few branches.
 2. Issue: the branch needs an issue. None yet: create it first (github-issue-check).

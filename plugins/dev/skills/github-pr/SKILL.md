@@ -20,8 +20,11 @@ description: "Commits, pushes, and PRs on a team repo"
 - Commit messages, PR titles and bodies: Korean, ~다 체. Plain words that say what happens.
 - Do not report commit hashes.
 
+## Flow
+Requirements interview (brainstorming; skip when the ask is already clear) → branch (github-newbranch) → develop, commit, push → the user checks the result → a fix interview and another round, or the PR → pr-review and required tests pass → self-merge (project merge policy) → branch-cleanup (PC main folder updated to the default branch).
+
 ## PR
-- New feature work (adds functionality; not bug fixes, docs, or rule/config changes): commit and push, then ask once with a decision card whether to open the PR, and open it only on yes (the user already asked for the PR or merge: just do it). This is a deliberate exception to the self-check. Other work: open the PR without asking.
+- New feature work (adds functionality; not bug fixes, docs, or rule/config changes): commit and push, then ask once with a decision card whether to open the PR or fix more, and open it only on that word (the user already asked for the PR or merge: just do it). This is a deliberate exception to the self-check. Other work: open the PR without asking.
 - Before the PR: check related repo docs are current and fix stale parts in the same PR.
 - Before every commit of code and before the PR: deslop.
 - Before the PR: pr-review.
@@ -30,7 +33,7 @@ description: "Commits, pushes, and PRs on a team repo"
 - Issue that still needs sign-off after merge (project info): write `Refs #N` instead of `Closes`.
 - No claude.ai link in the body (including the first-line Requested by / project thread lines). After creating the PR, read the body back and fix the footer if it became a claude.ai link.
 - Right after creating the PR: run pr-issue-sync, without being asked.
-- Self-merge only what the project's merge policy allows (project info).
+- Merge: self-merge per the project's merge policy (project info) as soon as its conditions pass, without asking; use the merge method it names.
 - Delete your own merged branch without asking.
 - Each time a PR merges (self-merge, or a merge event on a watched PR): at once, without being asked, run branch-cleanup on the PC (merged branch deleted, local default branch updated) and pr-issue-sync.
 - PR comments and review replies: team-docs.
