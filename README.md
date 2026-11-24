@@ -29,3 +29,12 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 작업 중 진행 상황 메시지를 따로 보내지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | Unity 코드에 모드 플래그, 숨은 참조, 로직 속 비주얼 타입을 넣지 않는다 | 팀 저장소 EditMode CodeRules 테스트 (#310) | 팀 저장소 PR |
 | 세션을 시작할 때마다 caveman lite를 켠다 | `hooks/caveman-lite.js` (SessionStart) | 클라우드, PC |
+| rebase, `git clean`, `git stash`를 쓰지 않는다 | `hooks/check-git.js` | 클라우드, PC |
+| 팀 저장소 브랜치 이름은 `feature/<번호>-<kebab>`, release, hotfix만 쓴다 | `hooks/check-git.js` | 클라우드, PC |
+| develop PR은 squash, main과 main → develop 동기화는 merge commit으로 머지한다 | `hooks/check-git.js` | 클라우드, PC |
+| 에디터 노이즈와 오디오 끄기(`m_DisableAudio: 1`)를 커밋하지 않는다 | `hooks/check-git.js` | PC |
+| 팀이 보는 GitHub 글에 claude.ai 링크, 물결 취소선을 넣지 않는다 | `hooks/check-github-text.js` | 클라우드, PC |
+| 가운뎃점을 쓰지 않는다(답장, 커밋, GitHub 글) | `hooks/block-asking.js`, `hooks/check-git.js`, `hooks/check-github-text.js` | 클라우드, PC |
+| 답장에 커밋 해시, 링크 없는 이슈 번호, 4줄 넘는 목록을 쓰지 않는다 | `hooks/block-asking.js` | 클라우드 |
+| PR을 만들면 담당자, 마일스톤, 라벨, pr-issue-sync, 머지하면 branch-cleanup, pr-issue-sync를 한다 | `hooks/after-pr.js` (PostToolUse) | 클라우드, PC |
+| PC 작업을 끝내기 전에 작업 폴더 최상위 임시 파일을 정리한다 | `hooks/pc-scratch-stop.js` (Stop) | PC |

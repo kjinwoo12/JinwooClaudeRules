@@ -18,9 +18,9 @@ Run whenever a Unity repo has changes this task did not make, before switching b
 Anything else (code, new assets, scenes or prefabs with content changes) is real work. A diff that fits no signature and isn't clearly content: treat as real.
 
 ## 2. Act
-- Noise: never commit it, never carry it into a feature branch, never stash it (stashes pile up). The editor makes it again, so discard it: `git restore -- <tracked noise paths>`, and delete untracked noise files the same signatures cover. Then work in the main folder as usual.
+- Noise: never carry it into a feature branch. The editor makes it again, so discard it: `git restore -- <tracked noise paths>`, and delete untracked noise files the same signatures cover. Then work in the main folder as usual.
 - Real work this task did not make, or another task running in that folder: leave it where it is; take a free pool worktree or wait (general worktree rule). Never mix it into the task's commits.
-- This task's own files: keep. Before each commit, `git diff --cached --name-only` must hold no noise path; unstage any.
+- This task's own files: keep.
 
 ## 3. Report
 One line: files discarded as noise with cause; real changes left in place.

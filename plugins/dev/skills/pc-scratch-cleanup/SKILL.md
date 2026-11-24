@@ -5,7 +5,7 @@ description: "End of every task that wrote files on the user's PC: delete its sc
 
 # PC scratch cleanup
 
-Run at the end of every task that ran on the PC (Remote Control or folder access), after commit/PR and before the final report. Not only when asked. Work folder: the one the task used (default: the PC work folder from the project info, see branch-cleanup).
+Run at the end of every task that ran on the PC (Remote Control or folder access), after commit/PR and before the final report. Work folder: the one the task used (default: the PC work folder from the project info, see branch-cleanup).
 
 ## 1. Survey
 - List the work folder top level, and size/date of each item.
@@ -13,7 +13,7 @@ Run at the end of every task that ran on the PC (Remote Control or folder access
 
 ## 2. Decide
 - Keep always: git working copies (team repo and others), .claude, anything the user made.
-- Inside a repo: never delete untracked files, never `git clean`. Untracked files there are listed, not removed.
+- Inside a repo: never delete untracked files; list them.
 - Delete: scratch this task or earlier tasks left at the folder top level (logs, xml, png/jpg shots, .patch, temp dirs), once anything the user needs is already delivered (thread attachment, project files, PR).
 - Unsure who made it or whether it's needed: list it with one-line evidence, don't delete.
 

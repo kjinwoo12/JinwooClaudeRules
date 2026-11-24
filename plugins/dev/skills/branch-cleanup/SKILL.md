@@ -25,7 +25,7 @@ Mandatory before creating any new branch (see github-newbranch), and right after
 - Cloud proxy 403s git/refs DELETE and push --delete; expect it.
 
 ## 4. Return
-- First, always: switch to the default branch, pull it from the main repo (no rebase), push it to the fork.
+- First, always: switch to the default branch, pull it from the main repo, push it to the fork.
 - Run as the pre-step for a new branch: stay on the updated default branch and create the new branch from it.
 - Otherwise: switch back to the branch the user was on before (or the one they name). If it was deleted, stay on the updated default branch and say so.
 

@@ -4,7 +4,7 @@ description: "Creating or editing a GitHub issue or recording a decision on it: 
 ---
 
 GitHub API first (MCP, else REST/GraphQL, gh). Chrome only when none of them can do it (an on-screen step: general Hands off the user's screen).
-Issue text and comments: no claude.ai link. A "Generated with Claude Code" footer is fine.
+A "Generated with Claude Code" footer is fine in issue text and comments.
 
 When creating or editing a GitHub issue:
 1. Search open+closed issues for duplicates; if found, update that one instead.

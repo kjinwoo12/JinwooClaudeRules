@@ -13,8 +13,7 @@ description: "Repo docs or text teammates read (issue and PR bodies, comments, c
 - No separate documents outside the thread goal.
 
 ## How
-- No claude.ai links, no teammate emails.
-- GitHub markdown: two single `~` in one paragraph or table cell render as strikethrough (`0~4, 0~6` strikes 「4, 0」). Write every range tilde as `\~` outside code; never use strikethrough on purpose. After posting, check the rendered page has no unintended strikethrough.
+- No teammate emails.
 
 ## Comment drafts for teammates
 - A post that must have no Claude footer: give the user a draft instead.
