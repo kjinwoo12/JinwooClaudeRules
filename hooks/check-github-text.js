@@ -1,7 +1,7 @@
 // PreToolUse hook (GitHub write tools, Bash, PowerShell for gh pr/issue): no claude.ai link, no middle dot, and no tilde strikethrough in text teammates read.
 const fs = require('fs');
 
-const GH_TEXT = /\bgh\s+(pr|issue)\s+(create|edit|comment|review)\b/;
+const GH_TEXT = /(?:^|[;&|(\n])\s*gh\s+(pr|issue)\s+(create|edit|comment|review)\b/;
 const BODY = /\s(?:--body|-b)\s+("(?:[^"\\]|\\.)*"|'[^']*')/;
 const BODY_FILE = /\s(?:--body-file|-F)\s+("[^"]*"|'[^']*'|\S+)/;
 
@@ -34,6 +34,7 @@ process.stdin.on('end', () => {
     all = command + '\n' + body;
   }
   if (/claude\.ai\//i.test(all)) deny('팀이 보는 글에는 claude.ai 링크를 넣지 않는다(Requested by, project thread 줄 포함). 빼고 다시 보낸다.');
-  if (body.includes('·')) deny('가운뎃점(·)은 쓰지 않는다. 쉼표나 와/과로 쓴다.');
+  // The team PR template's checklist lines carry middle dots; only Claude's own text is checked.
+  if (body.replace(/^\s*- \[[ x]\].*$/gm, '').includes('·')) deny('가운뎃점(·)은 쓰지 않는다. 쉼표나 와/과로 쓴다.');
   if (strikes(body)) deny('한 문단이나 표 칸에 ~가 두 개면 취소선이 된다. 범위 물결은 \\~로 쓴다.');
 });
