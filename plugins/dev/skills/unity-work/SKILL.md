@@ -24,6 +24,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 ## Code
 - No hardcoding: tunable values in SerializeField or SO, other fixed values as named constants. No magic numbers.
 - No runtime bootstrap.
+- Structure (team repo CONTRIBUTING 「코드 구조」, user 11/24): no mode flags (split by subclass or composition, SOLID); logic and visual fully apart (visual only in View folders, listening to logic events); other objects via VContainer injection, never Find or another object's GetComponent. When unsure where a piece goes, logic first, visual listens.
 - Code-rule tests that enforce these (project info): fix the code, never loosen the test.
 - No comments; repo lint blocks all but its allowed exceptions. When code seems to need an explanation, rename, extract, or add a test instead. Never use the `외부(...)` form for our own code's behavior.
 
