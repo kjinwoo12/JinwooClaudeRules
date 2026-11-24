@@ -23,6 +23,7 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 작업 폴더 안 파일 삭제는 허용 버튼 없이 한다 | `hooks/allow-workfolder-deletes.js` | PC |
 | 워크트리가 거부되면 묻지 않고 메인 폴더 새 브랜치로 계속한다 | `hooks/worktree-fallback.js` | PC |
 | 워크트리는 고정 풀만 쓰고 지우지 않는다(이슈마다 새로 만들지 않는다, 풀 밖 워크트리는 머지 뒤 지운다) | `hooks/block-worktree-churn.js` | PC |
+| 메인 폴더가 기본 브랜치에 있으면 풀 워크트리에서 브랜치를 만들지 않고 메인 폴더를 쓴다 | `hooks/block-worktree-churn.js` | PC |
 | 사용자에게 스레드에 한 줄을 적어 달라고 하지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | 시킨 일, 머지, 찾은 버그 수정을 되묻지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | 했다고 말할 때 근거(링크, 경로, 인용)를 붙인다 | `hooks/block-asking.js` | 클라우드 |
