@@ -18,7 +18,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 - PlayMode runs on the PC are silent (user heard test sounds, 11/21): before the run set that folder's `ProjectSettings/AudioManager.asset` `m_DisableAudio: 1` (open editor: `EditorUtility.audioMasterMute = true`), revert after.
 - Before commit and merge: related EditMode and PlayMode tests only, plus the EditMode CodeRules tests (project info) when code changed; every test run must pass (user 11/24: PRs got slow).
 - Related tests (user 11/24, PRs ran whole suites and fixtures, e.g. 248 EditMode and 104 PlayMode tests for one tuning value): only the test methods that assert the changed behavior, plus tests added or edited in this PR, named one by one in `-testFilter`, one run per test platform. Never a whole fixture or a "related area" (boss, combat). A tuning-value change: only tests that assert that value's effect. The PR's test line lists the method names.
-- Full PlayMode suite: only before a release (a release branch per git flow, project info), never per PR. Never merge past a failure called "known" or "pre-existing": fix it, or stop and report.
+- Full EditMode and PlayMode suites: only before a release (a release branch per git flow, project info), never per PR. Never merge past a failure called "known" or "pre-existing": fix it, or stop and report.
 - Change touches no code, scene, prefab, SO, or other asset (docs, rules, workflows only): no Unity tests.
 - Never ask the user to run tests.
 
