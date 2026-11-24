@@ -29,6 +29,7 @@ Skills are files in this repo, not installed plugins: when a trigger fits, read 
 - Repo docs, any text teammates read → [dev:team-docs](../plugins/dev/skills/team-docs/SKILL.md)
 - End of a task that wrote files on the PC → [dev:pc-scratch-cleanup](../plugins/dev/skills/pc-scratch-cleanup/SKILL.md)
 - Creating or editing a skill → anthropic-skills:skill-creator; before committing, check each added line against the split rule (One source for rules), even if a relay says where it goes.
+- Reading across many files when only the conclusion matters (where defined or used, how a flow works, what a change touches) → the `code-explorer` agent ([.claude/agents/code-explorer.md](../.claude/agents/code-explorer.md)).
 - Work the start note didn't cover → turn on the matching skill yourself.
 
 ## Principles

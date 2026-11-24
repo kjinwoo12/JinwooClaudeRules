@@ -9,6 +9,7 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 - 루트 `CLAUDE.md`가 지침과 프로젝트 정보를 `@` import로 불러옵니다. 이 저장소를 Claude 프로젝트 레포에 넣으면 모든 스레드가 시작할 때 읽습니다.
 - main에 push하면 클라우드 스레드는 다음 시작부터, PC 세션은 시작할 때 로컬 클론을 pull해서 바로 씁니다. claude.ai 동기화는 거치지 않습니다.
 - 새 스킬은 `plugins/dev/skills/<스킬>/SKILL.md`에 만들고 `instructions/general.md` 트리거에 링크를 답니다.
+- 서브에이전트는 `.claude/agents/<이름>.md`에 둡니다. 이 저장소를 프로젝트로 연 세션은 바로 쓰고, PC는 작업 폴더의 `.claude/agents`가 이 폴더로 연결돼 있습니다(위치는 `projects/<프로젝트>/info.md`).
 - 외부 스킬 사본은 `plugins/<원본 이름>/`에 원본 LICENSE와 함께 두고, 고친 점을 SKILL.md 첫머리에 적습니다(caveman, superpowers, ponytail).
 
 ## 규칙과 막는 검사
