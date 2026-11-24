@@ -27,7 +27,7 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 시킨 일, 머지, 찾은 버그 수정을 되묻지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | 했다고 말할 때 근거(링크, 경로, 인용)를 붙인다 | `hooks/block-asking.js` | 클라우드 |
 | 작업 중 진행 상황 메시지를 따로 보내지 않는다 | `hooks/block-asking.js` | 클라우드 |
-| Unity 코드에 숨은 참조, 로직 속 비주얼 타입을 넣지 않는다 | 팀 저장소 EditMode CodeRules 테스트 (#310) | 팀 저장소 PR |
+| Unity 코드에 숨은 참조, 로직 속 비주얼 타입을 넣지 않는다 | 팀 저장소 repo-lint.js 「저장소 규칙 검사」 (#310) | 팀 저장소 PR |
 | 한 클래스가 필드 값으로 다른 동작을 갈라 쓰지 않는다(하드 플래그) | 팀 저장소 docs/REVIEW.md AI 리뷰 항목 (#310) | 팀 저장소 PR |
 | 세션을 시작할 때마다 caveman lite를 켠다 | `hooks/caveman-lite.js` (SessionStart) | 클라우드, PC |
 | rebase, `git clean`, `git stash`를 쓰지 않는다 | `hooks/check-git.js` | 클라우드, PC |

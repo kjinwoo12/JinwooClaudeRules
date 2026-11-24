@@ -24,7 +24,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 ## Code
 - No hardcoding: tunable values in SerializeField or SO, other fixed values as named constants. No magic numbers.
 - No runtime bootstrap.
-- Structure (team repo CONTRIBUTING 「코드 구조」, user 11/24): no hard flags: a field must not switch one class between behaviors (e.g. player vs boss); split by subclass or composition, SOLID. Data traits and option bools are fine (user 11/24). Logic and visual fully apart (visual only in View folders, listening to logic events). Fixed dependencies via VContainer injection or inspector, never Find or another object's GetComponent; runtime targets (hit, collision) via TryGetComponent. When unsure where a piece goes, logic first, visual listens.
+- Structure (team repo CONTRIBUTING 「코드 구조」, user 11/24): no hard flags: a field must not switch one class between behaviors (e.g. player vs boss); split by subclass or composition, SOLID. Data traits and option bools are fine. Logic and visual fully apart: new or cleaned logic goes into the logic assembly (state and rules only), which tells visuals what happened by GameplayTag cues; visuals listen and never change logic state. Fixed dependencies via VContainer injection or inspector, never Find or another object's GetComponent; runtime targets (hit, collision) via TryGetComponent. A refactor PR passes the existing PlayMode tests unedited.
 - Code-rule tests that enforce these (project info): fix the code, never loosen the test.
 - No comments; repo lint blocks all but its allowed exceptions. When code seems to need an explanation, rename, extract, or add a test instead. Never use the `외부(...)` form for our own code's behavior.
 

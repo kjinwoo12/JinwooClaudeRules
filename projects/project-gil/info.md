@@ -6,12 +6,12 @@
 - Branch name: `feature/<issue-number>-<english-lowercase-kebab>`; other kinds (release, hotfix) per CONTRIBUTING git flow.
 - Board: the ProjectGil-RPG org project. Statuses: Backlog, Ready, In progress, In review, 총괄 확인 (sign-off), Done.
 - Milestones: M0 to M5.
-- Repo lint: `node .github/scripts/repo-lint.js` (also covers code comments: only CONTRIBUTING.md 「코드 주석」 exceptions); PR check 「저장소 규칙 검사」.
+- Repo lint: `node .github/scripts/repo-lint.js` (also covers code comments: only CONTRIBUTING.md 「코드 주석」 exceptions; from #310 code structure: no Find, no visual types or fixed GetComponent inside the logic assembly Assets/Gil/Scripts/Logic); PR check 「저장소 규칙 검사」.
 - PR template: AI review section 「AI 리뷰」; open design values 「기획 확인 필요」; work left 「남은 일」.
 - 총괄 확인 (sign-off): only an issue whose body or a teammate's comment asks for the 총괄's check, or a 게이트 issue; then `Refs #N`. Open design values go in the PR's 「기획 확인 필요」 and the PR still uses `Closes #N`; never send an issue there on your own judgment (e.g. 「보이는 모양 확인」).
 - Merge policy (user 11/23, everyone on the team): no human code review per PR. Every PR self-merges once its AI review (pr-review) and required tests (unity-work) pass. Feature PRs squash-merge into develop (one PR = one revertable commit). main holds only release points: release/* and hotfix/* reach main with a merge commit, and so does the main → develop sync PR. Human review happens only per release, on the build (play and result), never on code; a rejected release does not reach main. Team-side steps: docs/REVIEW.md, docs/RELEASE.md.
 - LFS: png and jpg.
-- Unity code-rule tests: EditMode CodeRules (no hardcoding, no runtime bootstrap; from #310: no hidden references, no visual types outside View folders, each with an exception list that only shrinks; hard flags are an AI review check in docs/REVIEW.md). PlayMode runs that load BossHall: without `-nographics` (BossHall_Level's realtime reflection probe crashes Unity under it, 11/21). Play check: docs/PLAY_CHECK.md. PR review steps: docs/REVIEW.md.
+- Unity code-rule tests: EditMode CodeRules (no hardcoding, no runtime bootstrap). PlayMode runs that load BossHall: without `-nographics` (BossHall_Level's realtime reflection probe crashes Unity under it, 11/21). Play check: docs/PLAY_CHECK.md. PR review steps: docs/REVIEW.md.
 
 ## PC
 - Work folder: F:\git\ProjectGilOrganization (also for non-Unity work). Unity repo: F:\git\ProjectGilOrganization\ProjectGilRpgClient.
