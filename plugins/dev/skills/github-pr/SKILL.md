@@ -27,6 +27,7 @@ Requirements interview (brainstorming; skip when the ask is already clear) → b
 - Before every commit of code and before the PR: deslop.
 - Before the PR: pr-review.
 - Before the PR: run the repo lint (project info) and fix every violation. Its PR check must pass.
+- A check that fails without starting (run log: `The job was not started because recent account payments have failed or your spending limit needs to be increased`) is Actions out of minutes or blocked on billing, not a lint failure: do by hand what the project's Actions-down steps say (project info), note it in the PR, and merge on that. Never raise a budget or spending limit; say once that Actions is down and until when.
 - Issue that still needs sign-off after merge (project info): write `Refs #N` instead of `Closes`.
 - After creating the PR, read the body back and fix the footer if it became a claude.ai link.
 - Merge: self-merge per the project's merge policy (project info) as soon as its conditions pass, without asking.
