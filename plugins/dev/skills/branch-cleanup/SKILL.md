@@ -18,7 +18,7 @@ Mandatory before creating any new branch (see github-newbranch), and right after
 - Unclear which branches go, or which branch to return to: list candidates with one-line evidence and ask once with a decision card.
 
 ## 3. Delete
-- Local: `git branch -d`; a branch whose PR was squash-merged needs `-D` (git can't see squash merges). Never `-D` on unmerged work.
+- Local: `git branch -d`; a branch whose PR was squash-merged (release, hotfix) needs `-D` (git can't see squash merges). Never `-D` on unmerged work.
 - Remote: delete without asking once the branch is merged or the user said so. Ask at most once per task.
 - Route when blocked: GitHub API (DELETE git/refs/heads/<branch>) → Remote Control `git push <remote> --delete <branch>` or `gh api -X DELETE repos/<owner>/<repo>/git/refs/heads/<branch>` on the PC. Never Chrome.
 - RC permission blocks `git push --delete`: try the other routes; never hand the user commands to run. Never report "can't delete".

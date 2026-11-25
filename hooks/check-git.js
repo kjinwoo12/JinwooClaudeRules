@@ -42,11 +42,11 @@ function noisePaths(dir, all) {
   })).map(([, file]) => file);
 }
 
-// Feature PRs squash into develop; PRs into main and the main -> develop sync use a merge commit.
+// Feature PRs into develop and the main -> develop sync use a merge commit; release and hotfix PRs squash into main.
 function checkMerge(refs, method) {
   const [base, head] = refs.split(/\s+/).map(ref => ref.split(':').pop());
-  const expected = base === 'main' || head === 'main' ? 'merge' : base === 'develop' ? 'squash' : null;
-  if (method === 'rebase' || (expected && method !== expected)) deny(`이 PR은 ${expected ?? 'squash나 merge'}로 머지한다(develop은 squash, main과 main→develop 동기화는 merge commit).`);
+  const expected = head === 'main' ? 'merge' : base === 'main' ? 'squash' : base === 'develop' ? 'merge' : null;
+  if (method === 'rebase' || (expected && method !== expected)) deny(`이 PR은 ${expected ?? 'squash나 merge'}로 머지한다(develop과 main→develop 동기화는 merge commit, main은 squash).`);
 }
 
 let input = '';

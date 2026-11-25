@@ -33,7 +33,7 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 세션을 시작할 때마다 caveman lite를 켠다 | `hooks/caveman-lite.js` (SessionStart) | 클라우드, PC |
 | rebase, `git clean`, `git stash`를 쓰지 않는다 | `hooks/check-git.js` | 클라우드, PC |
 | 팀 저장소 브랜치 이름은 `feature/<번호>-<kebab>`, release, hotfix만 쓴다 | `hooks/check-git.js` | 클라우드, PC |
-| develop PR은 squash, main과 main → develop 동기화는 merge commit으로 머지한다 | `hooks/check-git.js` | 클라우드, PC |
+| develop PR과 main → develop 동기화는 merge commit, main PR은 squash로 머지한다 | `hooks/check-git.js` | 클라우드, PC |
 | 에디터 노이즈와 오디오 끄기(`m_DisableAudio: 1`)를 커밋하지 않는다 | `hooks/check-git.js` | PC |
 | 팀이 보는 GitHub 글에 claude.ai 링크, 물결 취소선을 넣지 않는다 | `hooks/check-github-text.js` | 클라우드, PC |
 | 가운뎃점을 쓰지 않는다(답장, 커밋, GitHub 글) | `hooks/block-asking.js`, `hooks/check-git.js`, `hooks/check-github-text.js` | 클라우드, PC |
