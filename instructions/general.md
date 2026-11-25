@@ -4,13 +4,12 @@ Which skill when; details live in each skill. Project facts: `projects/<project>
 
 ## Triggers
 
-Skills are files in this repo, not installed plugins: when a trigger fits, read its linked SKILL.md.
+Skills are files in this repo, not installed plugins: when a trigger fits, read its linked SKILL.md. Default on, named by the SessionStart hook `caveman-lite.js`: caveman lite, ponytail, claude-code-setup.
 
 - First turn → every skill in the start note.
 - Before creative work (new feature or component, behavior change, planning anything new) → [superpowers:brainstorming](../plugins/superpowers/skills/brainstorming/SKILL.md)
 - Approved design or spec for a multi-step task, before touching code → [superpowers:writing-plans](../plugins/superpowers/skills/writing-plans/SKILL.md)
 - A written plan with two or more independent implementation parts, before touching code → [dev:task-split](../plugins/dev/skills/task-split/SKILL.md)
-- Writing or changing code in any repo → [ponytail](../plugins/ponytail/skills/ponytail/SKILL.md)
 - Unity code, scenes, prefabs, SO, tests, design numbers → [dev:unity-work](../plugins/dev/skills/unity-work/SKILL.md)
 - Unity repo changes this task didn't make, before checkout, branch, commit; after a Play check or build → [dev:unity-editor-noise](../plugins/dev/skills/unity-editor-noise/SKILL.md)
 - PC work in a worktree, or its branch merged → [dev:pc-worktree](../plugins/dev/skills/pc-worktree/SKILL.md)
@@ -31,6 +30,7 @@ Skills are files in this repo, not installed plugins: when a trigger fits, read 
 - End of a task that wrote files on the PC → [dev:pc-scratch-cleanup](../plugins/dev/skills/pc-scratch-cleanup/SKILL.md)
 - Creating or editing a skill → anthropic-skills:skill-creator; before committing, check each added line against the split rule (One source for rules), even if a relay says where it goes.
 - Work the start note didn't cover → turn on the matching skill yourself.
+- A topic none of these skills cover (a language, framework, tool, or domain) → Grep [ECC index](../plugins/ecc/INDEX.md) for its keywords and read the matching ECC SKILL.md; our rules win on conflict.
 
 ## Principles
 

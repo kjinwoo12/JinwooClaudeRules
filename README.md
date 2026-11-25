@@ -9,7 +9,8 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 - 루트 `CLAUDE.md`가 지침과 프로젝트 정보를 `@` import로 불러옵니다. 이 저장소를 Claude 프로젝트 레포에 넣으면 모든 스레드가 시작할 때 읽습니다.
 - main에 push하면 클라우드 스레드는 다음 시작부터, PC 세션은 시작할 때 로컬 클론을 pull해서 바로 씁니다. claude.ai 동기화는 거치지 않습니다.
 - 새 스킬은 `plugins/dev/skills/<스킬>/SKILL.md`에 만들고 `instructions/general.md` 트리거에 링크를 답니다.
-- 외부 스킬 사본은 `plugins/<원본 이름>/`에 원본 LICENSE와 함께 두고, 고친 점을 SKILL.md 첫머리에 적습니다(caveman, superpowers, ponytail).
+- 외부 스킬 사본은 `plugins/<원본 이름>/`에 원본 LICENSE와 함께 두고, 고친 점을 SKILL.md 첫머리에 적습니다(caveman, superpowers, ponytail, claude-code-setup, ecc).
+- 기본으로 켜는 스킬은 caveman lite, ponytail, claude-code-setup입니다(`hooks/caveman-lite.js`가 세션 시작 때 알림). ecc 스킬 328개는 기본으로 꺼 두고, 다른 스킬이 다루지 않는 주제가 나오면 `plugins/ecc/INDEX.md`를 검색해 맞는 스킬 하나만 읽습니다.
 
 ## 규칙과 막는 검사
 
@@ -30,7 +31,7 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 작업 중 진행 상황 메시지를 따로 보내지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | Unity 코드에 숨은 참조, 로직 속 비주얼 타입을 넣지 않는다 | 팀 저장소 repo-lint.js 「저장소 규칙 검사」 (#310) | 팀 저장소 PR |
 | 한 클래스가 필드 값으로 다른 동작을 갈라 쓰지 않는다(하드 플래그) | 팀 저장소 docs/REVIEW.md AI 리뷰 항목 (#310) | 팀 저장소 PR |
-| 세션을 시작할 때마다 caveman lite를 켠다 | `hooks/caveman-lite.js` (SessionStart) | 클라우드, PC |
+| 세션을 시작할 때마다 caveman lite, ponytail, claude-code-setup을 켠다 | `hooks/caveman-lite.js` (SessionStart) | 클라우드, PC |
 | rebase, `git clean`, `git stash`를 쓰지 않는다 | `hooks/check-git.js` | 클라우드, PC |
 | 팀 저장소 브랜치 이름은 `feature/<번호>-<kebab>`, release, hotfix만 쓴다 | `hooks/check-git.js` | 클라우드, PC |
 | develop PR과 main → develop 동기화는 merge commit, main PR은 squash로 머지한다 | `hooks/check-git.js` | 클라우드, PC |
