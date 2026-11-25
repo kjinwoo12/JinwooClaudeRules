@@ -26,4 +26,4 @@
 ## Sources
 - Meeting minutes: the latest file in the project files meeting/ folder; the user-edited Discord version wins.
 - Game spec (기획서): see the team repo's CLAUDE.md. Planning and design content (specs, plans, art or task lists) goes to Google Docs in that Drive folder, never into the repo (no repo doc, issue, or PR for it).
-- Art work needed: update the Google Doc 「프로젝트길_필요한_아트_목록」 in that Drive folder; extend it, never a new doc.
+- Art work needed: update the Google Sheet 「프로젝트길_필요한_아트_목록」 in that Drive folder (user 11/26: moved from the Google Doc of the same name, which now only links to it). Tab 「목록」, one row per item: 분류, 대상, 만들 것, 지금, 관련 이슈, 우선순위, 담당, 상태 (없음, 임시, 완료); tab 「안내」 holds the art direction. Extend it, never a new sheet or doc.
