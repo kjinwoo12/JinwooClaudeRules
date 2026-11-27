@@ -6,7 +6,8 @@ description: "You MUST use this before any creative work - creating features, bu
 # Brainstorming
 
 (Adapted from obra/superpowers 7.0.2, MIT, see ../../LICENSE. Changes: our
-reply channels, doc location, no opt-out offer, no visual companion.)
+reply channels, doc location, no opt-out offer, no visual companion,
+full detailed design for every feature.)
 
 **In our threads:** an open question is a plain `post_message` question
 (no 「할까요」-style ending; the cloud hook denies those). Picking among
@@ -210,8 +211,8 @@ how big the work is in plain words. They can override it.
 
 | Size | The design doc |
 |------|----------------|
-| A small change | a short one: what you already covered together, written down |
-| A project | the full written design (below) |
+| A small change (a fix, a value, a rename: nothing new for the player or user) | a short one: what you already covered together, written down |
+| A new feature, a behavior change, or a project | the full written design (below) |
 
 Short or full, the design doc has an **Approaches** part: the two or
 three ways you considered building it, what each trades off, which one
@@ -226,12 +227,24 @@ order, and brainstorm them one at a time.
 ## The Written Design
 
 Write a plain document a talented builder in the domain could plan
-from without going back to your human partner. Cover:
+from without going back to your human partner. Detail it like a spec
+deck you could present (user 11/27 「상세 기획서 ppt 수준으로」): every
+state, every screen, every number. A thin design is where low quality
+starts: whatever it leaves out, the builder guesses. Cover:
 
 - intent and the why
 - goals, non-goals, anti-goals
 - constraints
 - approaches (above)
+- flow: each step or state in order, what starts it and what ends it,
+  as a diagram
+- what the player or user sees and hears at each step: a sketch or
+  mockup per screen or beat, with reference images or clips
+- every number (timings, sizes, ranges, counts, costs) in a table; a
+  value nobody decided yet is marked as your proposal
+- edge cases: interruptions, failure, repeats, and what happens in each
+- done criteria: the tests and play check items that prove it works,
+  each one checkable (writing-plans turns them into tests)
 - the parts of the how they decided, as they decided them
 - what's left to the builder
 
@@ -243,7 +256,7 @@ builder check.
 says nothing, a Claude Doc. Never `docs/superpowers/` in the repo.
 Write it per [dev:doc-writing](../../../dev/skills/doc-writing/SKILL.md).
 
-**Builder check** (for a project): dispatch a fresh subagent with
+**Builder check** (for a full design): dispatch a fresh subagent with
 `builder-check-prompt.md` in this directory. When you tell your human
 partner you're writing it up, say a reviewer will read it first and you
 may come back once with a few questions. Don't hand over the document
@@ -264,7 +277,7 @@ document as that builder yourself.
 
 <HARD-GATE>
 Nothing gets built until your human partner approves the design doc:
-the short one for a small change, the full one for a project.
+the short one for a small change, the full one for anything else.
 Building includes writing product code, scaffolding, installing
 dependencies, creating projects, and invoking an implementation skill.
 Reading and exploring are fine.
