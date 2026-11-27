@@ -11,6 +11,7 @@ Skills are files in this repo, not installed plugins: when a trigger fits, read 
 - Approved design or spec for a multi-step task, before touching code → [superpowers:writing-plans](../plugins/superpowers/skills/writing-plans/SKILL.md)
 - A written plan with two or more independent implementation parts, before touching code → [dev:task-split](../plugins/dev/skills/task-split/SKILL.md)
 - Unity code, scenes, prefabs, SO, tests, design numbers → [dev:unity-work](../plugins/dev/skills/unity-work/SKILL.md)
+- Any sound, texture, VFX, model, animation, or shader look needed, before making one → [dev:asset-sourcing](../plugins/dev/skills/asset-sourcing/SKILL.md)
 - Unity repo changes this task didn't make, before checkout, branch, commit; after a Play check or build → [dev:unity-editor-noise](../plugins/dev/skills/unity-editor-noise/SKILL.md)
 - PC work in a worktree, or its branch merged → [dev:pc-worktree](../plugins/dev/skills/pc-worktree/SKILL.md)
 - Creating a branch → [dev:github-newbranch](../plugins/dev/skills/github-newbranch/SKILL.md)
