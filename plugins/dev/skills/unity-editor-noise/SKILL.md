@@ -19,7 +19,7 @@ Anything else (code, new assets, scenes or prefabs with content changes) is real
 
 ## 2. Act
 - Noise: never carry it into a feature branch. The editor makes it again, so discard it: `git restore -- <tracked noise paths>`, and delete untracked noise files the same signatures cover. Then work in the main folder as usual.
-- Real work this task did not make: leave it where it is and never stage it; it does not make the folder busy (general Main folder first). Never mix it into the task's commits. Also when the user says to discard all changes (「변경사항 다 없애」): discard noise only; name the real files and ask with a decision card before discarding them (user 11/26 「저절로 만든 변경이 아니면 없애면 안되지」).
+- Real work this task did not make: leave it where it is and never stage it; it does not make the folder busy (general Main folder first). Never mix it into the task's commits. Also when told to discard all changes: discard noise only; name the real files and ask with a decision card before discarding them.
 - This task's own files: keep.
 
 ## 3. Report

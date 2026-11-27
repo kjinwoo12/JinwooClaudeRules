@@ -5,7 +5,7 @@ description: "Before making or adding any sound, texture, VFX, model, animation,
 
 # Asset sourcing
 
-(user 11/27, after a code-synthesized hit sound, a stripe-and-dot telegraph shader, and a candidate list with no links: 「퀄리티 신경 안쓰냐?」, 「너가 직접 만드는 것보다 쓸만한거 가져다 쓰는 것부터 고려해」, 「에셋 후보 찾을 때 링크 꼭 넣게」)
+(user 11/27 「너가 직접 만드는 것보다 쓸만한거 가져다 쓰는 것부터 고려해」, 「에셋 후보 찾을 때 링크 꼭 넣게」)
 
 ## Find first
 - Any sound, texture, VFX, model, animation, or shader look: search existing assets before making one (Asset Store, Fab, Kenney, OpenGameArt, freesound, Sonniss GDC bundles, other sites). Make your own only when nothing fits, at shipping quality, never a test pattern.

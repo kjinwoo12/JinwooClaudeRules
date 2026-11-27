@@ -5,7 +5,7 @@ description: "Sync GitHub issue cards and the project board with meeting minutes
 
 Use when asked to tidy or update issue cards or the kanban board (e.g. from meeting minutes, or to reflect current work). Per-issue fields follow github-issue-check; team-facing text follows team-docs.
 
-1. Sources: open them this turn. Meeting minutes: the latest file where the project info says minutes live; where a user-edited version differs, it wins. Current work: other threads, branches, PRs, issue comments.
+1. Sources: open them this turn. Meeting minutes: the latest file where the project info says minutes live. Current work: other threads, branches, PRs, issue comments.
 2. Read all issues (open and closed) and the board's per-milestone view.
 3. Map each decision and to-do:
    - Existing issue: add a comment ("YYMMDD 정기회의에서 ..."), never edit its body.
