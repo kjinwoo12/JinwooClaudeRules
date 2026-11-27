@@ -18,6 +18,7 @@
 - Work folder: F:\git\ProjectGilOrganization (also for non-Unity work). Unity repo: F:\git\ProjectGilOrganization\ProjectGilRpgClient.
 - Worktree pool: `F:\git\ProjectGilOrganization\ProjectGilRpgClient-wt1`, `-wt2`, `-wt3`; with the main folder, up to 4 jobs at once.
 - AudioGen folder (audio-gen): F:\git\audiocraft.
+- Stable Audio Open 1.0 folder: F:\git\stable-audio (own `.venv`, weights in `model/`, `gen.py <list.json> <out dir> [variants]`, 44.1 kHz stereo). Chosen over AudioGen 11/27 (user: 「음질 퀄리티가 너무 낮은데」).
 - Not this project, never touch unless the user names it: F:\git\GilSample (personal portfolio). Scene names in asks (e.g. 쇼케이스) mean the team repo's scenes.
 - Permissions: `F:\git\ProjectGilOrganization\.claude\settings.local.json` and `ProjectGilRpgClient\.claude\settings.local.json` allow `Bash(git *)`, `PowerShell(git *)`, `Bash(gh *)`, `PowerShell(gh *)` (all git allowed, no deny). Allow rules do not stop the auto-mode classifier.
 - Deletes: deleting files or folders inside the work folder (Unity repo, worktrees) with rm, Remove-Item, del, or git rm is approved by the user; do it without asking. Outside the work folder: defaults. The classifier's own allow list is `autoMode.allow` in the user's `~\.claude\settings.json` only (not project settings); Claude may not edit it.
