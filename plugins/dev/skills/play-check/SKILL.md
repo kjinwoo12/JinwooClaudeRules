@@ -5,6 +5,6 @@ description: "When a change touches a Unity scene, prefab, or test scene control
 
 # Play check
 
-- Follow the project's play check doc (project info): open the scene, Play, do what its feature map says, take a `manage_scene` `screenshot` with `include_image` and look at it.
+- Follow the project's play check doc (project info): open the scene, Play, do what its feature map says, take a `manage_scene` `screenshot` with `include_image` and look at it. A change to how something looks or sounds: also unity-work 「Look and sound」.
 - Update the feature map when a test scene's controls change.
 - PR body: the changed scene/prefab paths and the play check result (what you pressed, what you saw).

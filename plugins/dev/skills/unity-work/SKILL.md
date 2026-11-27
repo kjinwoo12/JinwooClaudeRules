@@ -35,6 +35,14 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 - Do not decide game rules or design numbers. Do not propose game rules or safety guards inside a framework.
 - Missing design number or detail: do not ask. Put a temporary value in an SO, list each one under the PR body's open-design-values section (project info), and keep going.
 
+## Look and sound
+(user 11/27, after a code-synthesized hit sound and a stripe-and-dot telegraph shader: 「퀄리티 신경 안쓰냐?」)
+- Sounds, textures, VFX, shader looks: find an existing asset first (Asset Store, Fab, Kenney, OpenGameArt, freesound, other sites) whose license allows it in the team repo (CC0 or team use; no paid or redistribution-restricted originals). The plan lists the candidates with source and license before anything is made. Add each to the team repo's `THIRD_PARTY_NOTICES.md`; repo lint fails new sound files missing there. Make your own only when nothing fits, at shipping quality, never a test pattern.
+- Never synthesize sound in code or a script: you cannot hear it (repo lint blocks `AudioClip.Create` outside tests). For a sourced sound check only length, peak, and loudness (ffmpeg `loudnorm` measure) for clipping and level; tone stays unchecked: the art sheet row (project info) gets 「임시」, the PR's open-design-values section says it needs a listen.
+- Before visual work: take the art direction from the art sheet's direction tab (project info) and pick 2 to 3 reference images (store previews, captures of similar games); they go in the PR.
+- Shader code, material values, VFX parameters: written by the thread's model (Fable or Opus) or an Opus subagent (Agent `model: opus`), never Sonnet (user 11/27). Sonnet only wires them in code.
+- Visual check: game camera at play distance, captures at the start, middle, and end of the effect, next to the references. The thread's model judges: no debug or test pattern, color and saturation match the art direction, size and readability. Fails: fix and capture again.
+
 ## Finishing
 - When coding is done, commit with your own message (github-pr) and report what was made and what was changed.
 - Scene or prefab changed: play-check.
