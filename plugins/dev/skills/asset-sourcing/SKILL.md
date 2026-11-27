@@ -19,5 +19,6 @@ description: "Before making or adding any sound, texture, VFX, model, animation,
 ## Bring it in
 - Download per general Downloads (CLI; login-only sites: the download button in the user's Chrome).
 - Add each asset to the team repo's `THIRD_PARTY_NOTICES.md`; repo lint fails new sound files missing there.
+- Final report and PR: per asset brought in, what it is for, name, license, its source link checked to open this turn, and its repo path. An asset without its link is not reported as done.
 - Never synthesize sound in code or a script: you cannot hear it (repo lint blocks `AudioClip.Create` outside tests). For a sourced sound check only length, peak, and loudness (ffmpeg `loudnorm` measure) for clipping and level; tone stays unchecked: the art sheet row gets 「임시」, the PR's open-design-values section says it needs a listen.
 - Visual assets: unity-work 「Look and sound」 for references and the visual check.

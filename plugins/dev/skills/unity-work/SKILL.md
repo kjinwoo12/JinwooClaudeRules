@@ -8,7 +8,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 ## Where and how
 - Write client code on the PC local repo through Remote Control (RC) from the start (remote-control).
 - No PC access yet (e.g. waiting for the user's line in this thread): read and plan only. Never write client code in the cloud to carry over.
-- Use Unity MCP on the open editor. If MCP fails, batchmode `-batchmode -nographics -quit -logFile <path>` with `-projectPath <that folder>`. No computer use.
+- Use Unity MCP on the open editor (when the stdio tools see no editor, its HTTP bridge may still answer). MCP off: say once it needs turning on, never ask again. Editor closed (no `Temp/UnityLockfile`): batchmode `-batchmode -nographics -quit -logFile <path>` with `-projectPath <that folder>`. Editor open on that folder (batchmode exits on the lock): do the non-Unity steps, keep checking the bridge yourself, and continue when it answers (user 11/13, 11/15). No computer use.
 - Start Unity.exe hidden (`Start-Process -WindowStyle Hidden`, general Hands off the user's screen) with `-batchmode -nographics`; a run that needs rendering (play capture) drops only `-nographics`. Few launches: one run per test platform per feature.
 - Never launch the GUI editor (a PC hook denies it). A step neither batchmode nor MCP on the open editor can do: report it.
 

@@ -8,6 +8,7 @@ description: "Writing or cleaning up any document (plan, spec draft, Claude Doc,
 A document holds the content only: rules, values, options, facts, decisions.
 
 ## Content
+- Before creating a doc, list the folder where such docs live (project info) and read the ones on the topic; extend the one that covers it, a new doc only when none does (user 11/26).
 - Only what readers need and what will not go stale. Link folders instead of lists or current status.
 - Write so it reads one way only. Give locations as tab, table title, row, column name, and value, in sentences.
 
