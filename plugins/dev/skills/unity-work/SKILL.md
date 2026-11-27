@@ -39,7 +39,7 @@ description: "Unity code, scenes, prefabs, SO, tests, design work (Unity MCP, ba
 (user 11/27, after a code-synthesized hit sound and a stripe-and-dot telegraph shader: 「퀄리티 신경 안쓰냐?」)
 - Sounds, textures, VFX, models, shader looks: find and bring in an existing asset first (asset-sourcing).
 - Before visual work: take the art direction from the art sheet's direction tab (project info) and pick 2 to 3 reference images (store previews, captures of similar games); they go in the PR.
-- Shader code, material values, VFX parameters: written by the thread's model (Fable or Opus) or an Opus subagent (Agent `model: opus`), never Sonnet (user 11/27). Sonnet only wires them in code.
+- Shader code, material values, VFX parameters: written by the thread's model (Fable or Opus), never a subagent (user 11/27). Sonnet only wires them in code.
 - Visual check: game camera at play distance, captures at the start, middle, and end of the effect, next to the references. The thread's model judges: no debug or test pattern, color and saturation match the art direction, size and readability. Fails: fix and capture again.
 
 ## Finishing
