@@ -14,6 +14,7 @@ process.stdin.on('end', () => {
   const start = fs.statSync(transcript).birthtimeMs;
   const left = fs.readdirSync(ROOT, { withFileTypes: true })
     .filter(entry => !entry.name.startsWith('.') && !/\.(md|docx|xlsx|pptx|pdf)$/i.test(entry.name))
+    .filter(entry => entry.name !== 'Builds')
     .filter(entry => !(entry.isDirectory() && fs.existsSync(path.join(ROOT, entry.name, '.git'))))
     .filter(entry => fs.statSync(path.join(ROOT, entry.name)).mtimeMs > start)
     .map(entry => entry.name);

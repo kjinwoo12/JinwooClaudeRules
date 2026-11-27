@@ -45,4 +45,5 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | PR을 만들면 담당자, 마일스톤, 라벨, pr-issue-sync, 머지하면 branch-cleanup, pr-issue-sync를 한다 | `hooks/after-pr.js` (PostToolUse) | 클라우드, PC |
 | PC 작업을 끝내기 전에 작업 폴더 최상위 임시 파일을 정리한다(요청받은 문서는 남긴다) | `hooks/pc-scratch-stop.js` (Stop) | PC |
 | 소리 파일은 다운로드 카드가 아니라 바로 들을 수 있게 보낸다 | `hooks/block-attach-audio.js` (SendUserFile) | PC |
+| 빌드와 배포 zip은 `F:\git\ProjectGilOrganization\Builds`에 둔다(`F:\Builds` 금지) | `hooks/check-build-path.js` | PC |
 | 메뉴, 설정, 도구 같은 시스템 기능의 기획은 Drive 문서 없이 스레드에서 한다(새 Google 문서를 만들기 전에 묻는다) | `hooks/check-spec-doc.js` (브라우저 도구) | PC |
