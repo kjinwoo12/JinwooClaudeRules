@@ -62,6 +62,6 @@ process.stdin.on('end', () => {
   if (body.replace(/^\s*- \[[ x]\].*$/gm, '').includes('·')) deny('가운뎃점(·)은 쓰지 않는다. 쉼표나 와/과로 쓴다.');
   const skipped = skippedFindings(body);
   if (skipped.length) deny(`리뷰 지적을 고치지 않고 넘기지 않는다(${skipped.length}건). 고친 뒤 「고친 것」에 적는다. 기획 값이나 보이는 모양이 바뀌는 지적만 결정 카드로 묻고 「사용자 결정:」으로, 틀린 지적은 「오탐:」과 근거로 적는다.`);
-  if (prCreate && missingSpec(body)) deny('기능 PR 본문에 「## 기획서」 칸을 두고 승인받은 기획서 Google Docs 링크를 넣는다(general.md 「Feature flow」 2단계). 기획서가 필요 없는 작은 수정이면 그 칸에 「작은 수정: <이유>」를 적는다.');
+  if (prCreate && missingSpec(body)) deny('기능 PR 본문에 「## 기획서」 칸을 두고 승인받은 기획서 Google Docs 링크를 넣는다(dev:feature-flow 2단계). 기획서가 필요 없는 작은 수정이면 그 칸에 「작은 수정: <이유>」를 적는다.');
   if (strikes(body)) deny('한 문단이나 표 칸에 ~가 두 개면 취소선이 된다. 범위 물결은 \\~로 쓴다.');
 });

@@ -2,26 +2,12 @@
 
 Which skill when; details live in each skill. Project facts: `projects/<project>/info.md`. Coordinator: [coordinator.md](coordinator.md).
 
-## Feature flow
-
-(user 11/27 「이 순서를 기능 수정에 적용하면 되지」, 「재발 방지해놔」) Any request to make or change something in the product, new feature or change to an existing one (code, scene, or an asset put into the game, such as sound or VFX), runs these steps in order. Say the step number in each report. A task skill (audio-gen, asset-sourcing, unity-work, ...) works inside steps 5 to 9 and never replaces 1 to 4.
-
-1. Interview: brainstorming conversation.
-2. Spec in prose: brainstorming's written design, in the project's planning-doc place.
-3. Visual or detailed explanation: slides, mockups, or reference clips per screen, beat, or sound.
-4. Detailed requirements: the spec's done criteria as a checklist; the user approves the spec here.
-5. Structure design: writing-plans.
-6. Test code first, 7. build from the tests: test-driven-development.
-8. Run tests: unity-work related tests.
-9. Check the result: play-check, verification-before-completion, against every item from step 4.
-
-A small change (typo, one value, a rename) keeps the short design and says so; a feature PR body carries a 「기획서」 section with the spec link or 「작은 수정: <reason>」 (`hooks/check-github-text.js`).
-
 ## Triggers
 
 Skills are files in this repo, not installed plugins: when a trigger fits, read its linked SKILL.md. Default on, named by the SessionStart hook `caveman-lite.js`: caveman lite, ponytail, claude-code-setup.
 
 - First turn → every skill in the start note.
+- Any request to make or change something in the product (feature, change to one, asset put in the game), even one naming a task skill, before anything else → [dev:feature-flow](../plugins/dev/skills/feature-flow/SKILL.md)
 - Before creative work (new feature or component, behavior change, planning anything new) → [superpowers:brainstorming](../plugins/superpowers/skills/brainstorming/SKILL.md)
 - Approved design or spec for a multi-step task, before touching code → [superpowers:writing-plans](../plugins/superpowers/skills/writing-plans/SKILL.md)
 - A written plan with two or more independent implementation parts, before touching code → [dev:task-split](../plugins/dev/skills/task-split/SKILL.md)
