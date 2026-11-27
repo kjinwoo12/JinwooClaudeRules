@@ -11,7 +11,7 @@ description: Use when you have a spec or requirements for a multi-step task, bef
 
 Write implementation plans for an engineer who has not seen this codebase or this spec. Assume they write idiomatic code in the project's language once they know the exact interface and the exact test, and that they will make a reasonable choice wherever the plan leaves one open. What they cannot know is what you decided: which files, which names and signatures, which values from the spec, which tests prove each task. Document those. Give them the whole plan as bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.
 
-**Save plans to:** where the project info says planning docs go; if it says nothing, a Claude Doc. Never `docs/superpowers/` in the repo.
+**Save plans to:** the thread for a system feature ([dev:feature-flow](../../../dev/skills/feature-flow/SKILL.md) step 2); otherwise where the project info says planning docs go; if it says nothing, a Claude Doc. Never `docs/superpowers/` in the repo.
 
 ## Scope Check
 

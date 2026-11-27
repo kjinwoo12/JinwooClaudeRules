@@ -252,8 +252,9 @@ For a small change, the short design covers the same points in a line
 or two each and goes straight to your human partner, without the
 builder check.
 
-**Where it goes:** where the project info says planning docs go; if it
-says nothing, a Claude Doc. Never `docs/superpowers/` in the repo.
+**Where it goes:** per [dev:feature-flow](../../../dev/skills/feature-flow/SKILL.md)
+step 2 (system features stay in the thread); otherwise where the project
+info says planning docs go; if it says nothing, a Claude Doc. Never `docs/superpowers/` in the repo.
 Write it per [dev:doc-writing](../../../dev/skills/doc-writing/SKILL.md).
 
 **Builder check** (for a full design): dispatch a fresh subagent with
