@@ -25,6 +25,6 @@
 
 ## Sources
 - Meeting minutes: the latest file in the project files meeting/ folder; the user-edited Discord version wins.
-- Combat planning content goes into 프로젝트길_전투흐름_시안 in the 기획안 Drive folder (프로젝트길_패링흐름_시안 also exists).
+- Combat planning content (parry flow and sound direction included) goes into 프로젝트길_전투흐름_시안 in the 기획안 Drive folder; 프로젝트길_패링흐름_시안 now only links there (user 11/27).
 - Game spec (기획서): see the team repo's CLAUDE.md. Planning and design content (specs, plans, art or task lists) goes to Google Docs in that Drive folder, never into the repo (no repo doc, issue, or PR for it).
 - Art and sound work needed (sounds: 분류 「소리」): update the Google Sheet 「프로젝트길_필요한_아트_목록」 in that Drive folder (user 11/26: moved from the Google Doc of the same name, which now only links to it). Tab 「목록」, one row per item: 분류, 대상, 만들 것, 지금, 관련 이슈, 우선순위, 담당, 상태 (없음, 임시, 완료); tab 「안내」 holds the art direction. Extend it, never a new sheet or doc.
