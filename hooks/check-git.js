@@ -5,7 +5,7 @@ const os = require('os');
 const path = require('path');
 
 const TEAM = (process.argv[2] ?? '').toLowerCase();
-const BRANCH_OK = /^(feature\/\d+-[a-z0-9]+(-[a-z0-9]+)*|release\/\S+|hotfix\/\S+)$/;
+const BRANCH_OK = /^(feature\/\d+-[a-z0-9]+(-[a-z0-9]+)*|release\/\S+|hotfix\/\S+|sync\/main-to-develop)$/;
 const GIT = /(?:^|[;&|(\n])\s*git(?:\s+-C\s+("[^"]*"|'[^']*'|\S+))?\s+(\S+)([^\n;|&]*)/g;
 const GH_MERGE = /(?:^|[;&|(\n])\s*gh\s+pr\s+merge\b([^\n;|&]*)/;
 const WINGET_GH = path.join(process.env.LOCALAPPDATA ?? '', 'Programs', 'GitHub CLI', 'bin', 'gh.exe');
@@ -54,7 +54,7 @@ process.stdin.on('data', chunk => { input += chunk; });
 process.stdin.on('end', () => {
   const { tool_name: tool, tool_input: args, cwd } = JSON.parse(input);
   if (tool.endsWith('create_branch')) {
-    if (args.repo?.toLowerCase() === TEAM && !BRANCH_OK.test(args.branch)) deny(`팀 저장소 브랜치 이름은 feature/<이슈번호>-<영어-소문자>, release/*, hotfix/*다: ${args.branch}`);
+    if (args.repo?.toLowerCase() === TEAM && !BRANCH_OK.test(args.branch)) deny(`팀 저장소 브랜치 이름은 feature/<이슈번호>-<영어-소문자>, release/*, hotfix/*, sync/main-to-develop(RELEASE.md 충돌 해결)다: ${args.branch}`);
     return;
   }
   if (tool.endsWith('merge_pull_request')) {
@@ -74,7 +74,7 @@ process.stdin.on('end', () => {
     if (sub === 'stash' && !/^\s+(list|show)\b/.test(rest)) deny('stash하지 않는다. 노이즈는 git restore로 버리고, 남의 작업은 그대로 둔다(unity-editor-noise).');
     const created = rest.match(sub === 'switch' ? /\s-[cC]\s+(\S+)/ : sub === 'checkout' ? /\s-[bB]\s+(\S+)/ : sub === 'branch' ? /^\s+([^-\s]\S*)/ : null);
     if (created && run('git', ['remote', '-v'], dir).toLowerCase().includes(TEAM) && !BRANCH_OK.test(unquote(created[1]))) {
-      deny(`팀 저장소 브랜치 이름은 feature/<이슈번호>-<영어-소문자>, release/*, hotfix/*다: ${created[1]}`);
+      deny(`팀 저장소 브랜치 이름은 feature/<이슈번호>-<영어-소문자>, release/*, hotfix/*, sync/main-to-develop(RELEASE.md 충돌 해결)다: ${created[1]}`);
     }
     if (sub === 'commit' && rest.includes('·')) deny('가운뎃점(·)은 쓰지 않는다. 쉼표나 와/과로 쓴다.');
     if (sub === 'commit' && /\bgit\b[^\n;|&]*\s(add|stage)\b/.test(command.slice(0, command.indexOf(rest)))) {
