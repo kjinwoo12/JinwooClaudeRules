@@ -8,7 +8,7 @@ description: "Before making or adding any sound, texture, VFX, model, animation,
 (user 11/27 「너가 직접 만드는 것보다 쓸만한거 가져다 쓰는 것부터 고려해」, 「에셋 후보 찾을 때 링크 꼭 넣게」)
 
 ## Find first
-- Any sound, texture, VFX, model, animation, or shader look: search existing assets before making one (Asset Store, Fab, Kenney, OpenGameArt, freesound, Sonniss GDC bundles, other sites). Make your own only when nothing fits, at shipping quality, never a test pattern.
+- Any sound, texture, VFX, model, animation, or shader look: search existing assets before making one (Asset Store, Fab, Kenney, OpenGameArt, freesound, other sites). Make your own only when nothing fits, at shipping quality, never a test pattern.
 - License: only what may sit in the team repo and ship (CC0, or a license that allows team use). No paid or redistribution-restricted originals, no video-site rips, no AI generators.
 - Several sounds or effects needed: list them first (one row each in the art sheet, project info), then find candidates per row.
 
