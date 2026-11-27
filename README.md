@@ -44,7 +44,7 @@ Claude 지침과 스킬을 git으로 관리하는 저장소입니다. 스킬은 
 | 답장에 커밋 해시, 링크 없는 이슈 번호, 4줄 넘는 목록을 쓰지 않는다 | `hooks/block-asking.js` | 클라우드 |
 | PR을 만들면 담당자, 마일스톤, 라벨, pr-issue-sync, 머지하면 branch-cleanup, pr-issue-sync를 한다 | `hooks/after-pr.js` (PostToolUse) | 클라우드, PC |
 | PC 작업을 끝내기 전에 작업 폴더 최상위 임시 파일을 정리한다(요청받은 문서는 남긴다) | `hooks/pc-scratch-stop.js` (Stop) | PC |
-| 사용자에게 쓰는 글은 한국어로 쓴다 | `hooks/check-reply.js` (Stop) | PC |
+| 사용자에게 쓰는 글은 한국어로 쓴다 (중간 설명과 마지막 답 모두) | `hooks/check-reply.js` (Stop) | PC |
 | 지적받으면 사과로 끝내지 않고 고친 뒤 검사를 더한다 | `hooks/check-reply.js` (Stop) | PC |
 | 번호 목록으로 시킨 일을 조사와 질문만 하고 끝내지 않는다 | `hooks/check-reply.js` (Stop) | PC |
 | 소리 파일은 다운로드 카드가 아니라 바로 들을 수 있게 보낸다 | `hooks/block-attach-audio.js` (SendUserFile) | PC |

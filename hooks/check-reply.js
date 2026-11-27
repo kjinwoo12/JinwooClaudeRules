@@ -26,6 +26,12 @@ function turnEntries(lines) {
   return { asked, parts: entries.slice(start + 1).filter(entry => entry.type === 'assistant').flatMap(entry => entry.message?.content ?? []) };
 }
 
+// The transcript is written asynchronously and can miss the closing text; Stop input carries it as last_assistant_message.
+function withLastMessage(parts, last) {
+  const text = typeof last === 'string' ? last : (last?.content ?? []).filter?.(part => part.type === 'text').map(part => part.text).join('\n') ?? '';
+  return text && !parts.some(part => part.type === 'text' && part.text === text) ? [...parts, { type: 'text', text }] : parts;
+}
+
 // Three or more numbered lines in the user's message = a list of orders.
 function isOrderList(text) {
   return (text.match(/^\s*\d+[.)]\s+\S/gm) ?? []).length >= 3;
@@ -50,6 +56,9 @@ if (process.argv[2] === '--test') {
   assert.ok(check([{ type: 'text', text: '어떤 방식으로 할까요?' }], orders));
   assert.equal(check([{ type: 'tool_use', name: 'Edit' }, { type: 'text', text: '넣었습니다.' }], orders), null);
   assert.equal(check([{ type: 'text', text: '넣었습니다.' }], '1. 하나만\n그리고 질문'), null);
+  const closing = 'The sounds are swapped in. The Unity editor has closed, so the new sounds load the next time you open it.';
+  assert.ok(check(withLastMessage([{ type: 'text', text: '넣었습니다.' }], closing)), 'closing text missing from the transcript is still checked');
+  assert.equal(withLastMessage([{ type: 'text', text: closing }], closing).length, 1);
   console.log('ok');
   process.exit(0);
 }
@@ -57,9 +66,9 @@ if (process.argv[2] === '--test') {
 let input = '';
 process.stdin.on('data', chunk => { input += chunk; });
 process.stdin.on('end', () => {
-  const { transcript_path: transcript, stop_hook_active: active } = JSON.parse(input);
+  const { transcript_path: transcript, stop_hook_active: active, last_assistant_message: last } = JSON.parse(input);
   if (active || !fs.existsSync(transcript ?? '')) return;
   const { asked, parts } = turnEntries(fs.readFileSync(transcript, 'utf8').split('\n'));
-  const reason = check(parts, asked);
+  const reason = check(withLastMessage(parts, last), asked);
   if (reason) console.log(JSON.stringify({ decision: 'block', reason }));
 });
