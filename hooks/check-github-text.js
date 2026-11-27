@@ -1,4 +1,4 @@
-// PreToolUse hook (GitHub write tools, Bash, PowerShell for gh pr/issue): no claude.ai link, no middle dot, and no tilde strikethrough in text teammates read.
+// PreToolUse hook (GitHub write tools, Bash, PowerShell for gh pr/issue): no claude.ai link, no middle dot, and no tilde strikethrough in text teammates read; a feature PR links its spec.
 const fs = require('fs');
 
 const GH_TEXT = /(?:^|[;&|(\n])\s*gh\s+(pr|issue)\s+(create|edit|comment|review)\b/;
@@ -31,15 +31,28 @@ function skippedFindings(text) {
     .filter(item => item && item !== '없음' && !/^(사용자 결정|오탐):/.test(item));
 }
 
+// A feature PR (closes or refers to an issue) must link its approved spec doc, or say it is a small change and why.
+function missingSpec(text) {
+  if (!/\b(Closes|Refs) #\d+/.test(text)) return false;
+  const lines = text.split(/\r?\n/);
+  const start = lines.findIndex(line => /^##\s*기획서\s*$/.test(line));
+  if (start < 0) return true;
+  const end = lines.findIndex((line, i) => i > start && /^##\s/.test(line));
+  const section = lines.slice(start + 1, end < 0 ? undefined : end).join('\n');
+  return !/https:\/\/docs\.google\.com\/|작은 수정:\s*\S/.test(section);
+}
+
 let input = '';
 process.stdin.on('data', chunk => { input += chunk; });
 process.stdin.on('end', () => {
   const { tool_name: tool, tool_input: args } = JSON.parse(input);
   let all = [args.title, args.body].filter(Boolean).join('\n');
   let body = all;
+  let prCreate = /create_pull_request/.test(tool);
   if (/^(Bash|PowerShell)$/.test(tool)) {
     const command = args.command ?? '';
     if (!GH_TEXT.test(command)) return;
+    prCreate = /gh\s+pr\s+create\b/.test(command);
     const file = command.match(BODY_FILE)?.[1]?.replace(/^["']|["']$/g, '');
     body = (file && fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '') + '\n\n' + (command.match(BODY)?.[1] ?? '');
     all = command + '\n' + body;
@@ -49,5 +62,6 @@ process.stdin.on('end', () => {
   if (body.replace(/^\s*- \[[ x]\].*$/gm, '').includes('·')) deny('가운뎃점(·)은 쓰지 않는다. 쉼표나 와/과로 쓴다.');
   const skipped = skippedFindings(body);
   if (skipped.length) deny(`리뷰 지적을 고치지 않고 넘기지 않는다(${skipped.length}건). 고친 뒤 「고친 것」에 적는다. 기획 값이나 보이는 모양이 바뀌는 지적만 결정 카드로 묻고 「사용자 결정:」으로, 틀린 지적은 「오탐:」과 근거로 적는다.`);
+  if (prCreate && missingSpec(body)) deny('기능 PR 본문에 「## 기획서」 칸을 두고 승인받은 기획서 Google Docs 링크를 넣는다(general.md 「Feature flow」 2단계). 기획서가 필요 없는 작은 수정이면 그 칸에 「작은 수정: <이유>」를 적는다.');
   if (strikes(body)) deny('한 문단이나 표 칸에 ~가 두 개면 취소선이 된다. 범위 물결은 \\~로 쓴다.');
 });
